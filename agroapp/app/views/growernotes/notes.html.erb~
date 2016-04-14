@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html>
+
+<% @allnotes.each do |growernote| %>
+<%= growernote.notes %>
+<% end %>
+
+</html>
