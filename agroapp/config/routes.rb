@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-get '/growernotes/notes' => 'growernotes#index'
+get '/growernotes/index' => 'growernotes#index'
+get '/growernotes/new' => 'growernotes#new'
+post 'growernotes' => 'growernotes#create'
+resources :growernotes
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
