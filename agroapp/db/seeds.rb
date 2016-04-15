@@ -6,4 +6,4 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-s1 = Growernote.create([{notes: 'This farm is bullshit' }])
+s1 = Growernote.create([{ notes: 'This farm is bullshit' }])

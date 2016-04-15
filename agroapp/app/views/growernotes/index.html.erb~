@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 
-<% @allnotes.each do |growernote| %>
-<%= growernote.notes %>
+<% @allnotes.each do |poop| %>
+<%= poop.noters %>
 <% end %>
 
+<%= link_to 'New Note', "/growernotes/new" %>
 </html>

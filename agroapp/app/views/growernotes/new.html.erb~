@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+<%= form_tag :action => 'notes_insert' do %>
+<%= notes_insert.label :growernotes %> <br>
+<%= notes_insert.text_area :notes %>
+<%= submit_tag "Make" %>
+<% end %>
+
+</html>
