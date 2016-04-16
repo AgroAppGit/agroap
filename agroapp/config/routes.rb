@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+root 'pages#home_page'
 get '/growernotes/index' => 'growernotes#index'
 get '/growernotes/new' => 'growernotes#new'
 post 'growernotes' => 'growernotes#create'
