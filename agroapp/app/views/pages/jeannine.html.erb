@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<link type="text/css" rel="stylesheet" href="indexstyle.css" />
+	<title>Jeannine Willett</title>
+</head>
+<body>
+	<div class="pagetop">
+		<div class="pagetop_pic">
+			<a href="http://www.agro.com"><img src="http://i.imgur.com/ii4SpRt.jpg" /></a>
+		</div>
+		<% if current_user %>
+		<ul>
+			<li><%= link_to "Log out", logout_path, method: "delete" %></li>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="contactus.html">Contact Us</a></li>
+			<li><a href="aboutus.html">About Us</a></li>
+			<li><a href="services.html">Services</a></li>
+			<li><a href="ourstaff.html">Our Staff</a></li>
+			<li><a href="weather.html">Weather</a></li>
+			<li><a href="Resources.html">Resources</a></li>
+			<li><a href="ipmlinks.html">IPM Links</a></li>
+		</ul>
+		<% else %>
+		<ul>
+			<li><a href="clientlogin.html">Client Login</a></li>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="contactus.html">Contact Us</a></li>
+			<li><a href="aboutus.html">About Us</a></li>
+			<li><a href="services.html">Services</a></li>
+			<li><a href="ourstaff.html">Our Staff</a></li>
+			<li><a href="weather.html">Weather</a></li>
+			<li><a href="Resources.html">Resources</a></li>
+			<li><a href="ipmlinks.html">IPM Links</a></li>
+		</ul>
+		<% end %>
+	</div>
+	<div class="shortbio">
+		<img src="http://i.imgur.com/x2isCNC.jpg?2" />
+		<div class="shortbiostuff">
+		<h1>Jeannine Willett</h1>
+		<p>Jeannine Willett's responsibilities at Agro Engineering include managing and implementing the San Luis Valley green peach aphid suppression and monitoring program, which is an integrated pest management program that works with the surrounding community to safely and effectively prevent aphid infestations in potatoes.  She has done extensive research on management of plant parasitic nematodes through the use of green manure crops, cover crops, and biological inoculants.</p>
+		<p>Jeannine specializes in Integrated Pest Management.  She has a strong interest in beneficial insects, soil health, and regenerative farming.  Jeannine is licensed as a Certified Crop Adviser and also as a qualified supervisor with the Colorado State Department of Agriculture.</p>
+		<p>Prior to joining the Agro Engineering team, Jeannine worked as a cattle rancher and with the U.S. Fish and Wildlife Service on the Alamosa Wildlife Refuge.  She was raised in some of the most beautiful National Parks in the US, including Sequoia, Mount Rainier, the Blue Ridge Parkway, and Dinosaur, but has called the San Luis Valley home since graduating from CSU.</p>
+		<a href="ourstaff.html">Back to our staff</a>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="container_footer">
+			<div>
+				<ul>
+					<p> Copyright Agro Engineering Inc. 2016</p>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>

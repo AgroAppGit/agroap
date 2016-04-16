@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+<link type="text/css" rel="stylesheet" href="indexstyle.css" />
+	<title>Our Staff</title>
+</head>
+<body>
+	<div class="pagetop">
+		<div class="pagetop_pic">
+			<a href="http://www.agro.com"><img src="http://i.imgur.com/ii4SpRt.jpg" /></a>
+		</div>
+		<% if current_user %>
+		<ul>
+			<li><%= link_to "Log out", logout_path, method: "delete" %></li>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="contactus.html">Contact Us</a></li>
+			<li><a href="aboutus.html">About Us</a></li>
+			<li><a href="services.html">Services</a></li>
+			<li><a href="ourstaff.html">Our Staff</a></li>
+			<li><a href="weather.html">Weather</a></li>
+			<li><a href="Resources.html">Resources</a></li>
+			<li><a href="ipmlinks.html">IPM Links</a></li>
+		</ul>
+		<% else %>
+		<ul>
+			<li><a href="clientlogin.html">Client Login</a></li>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="contactus.html">Contact Us</a></li>
+			<li><a href="aboutus.html">About Us</a></li>
+			<li><a href="services.html">Services</a></li>
+			<li><a href="ourstaff.html">Our Staff</a></li>
+			<li><a href="weather.html">Weather</a></li>
+			<li><a href="Resources.html">Resources</a></li>
+			<li><a href="ipmlinks.html">IPM Links</a></li>
+		</ul>
+		<% end %>
+	</div>
+	<div class="ourstaffheader">
+		<h1>Our Staff</h1>
+			<div class="twopersoncontainer">
+			<div class="photo1"><a href="steven.html">
+				<img src="http://i.imgur.com/1Dbg7MS.jpg?2" />
+				<div class="photoinfo1">
+					<h1>Steven McKechnie</h1>
+					<p>B.S. Plant Biology, CCA</p>
+					<p>University of California, Davis</p>
+				</div>
+			</a>
+			</div>
+			<div class="photo2"><a href="michael.html">
+				<img src="http://i.imgur.com/L4LFJPn.jpg?1" />
+				<div class="photoinfo2">
+					<h1>Michael Curtis</h1>
+					<p>B.S. Civil Engineering</p>
+					<p>Irrigation Water Management, Irrigation</p>
+					<p>System Evaluation and Design,</p>
+					<p>Colorado State University</p>
+				</div>
+			</a>
+			</div>
+			</div>
+			<div class="twopersoncontainer">
+			<div class="photo1"><a href="star.html">
+				<img src="http://i.imgur.com/rDkC8bO.jpg?1" />
+				<div class="photoinfo1">
+					<h1>Star Quintana</h1>
+					<p>Office Manager, Customer</p>
+					<p>Service, and Team Coordination</p>
+				</div>
+			</a>
+			</div>
+			<div class="photo2"><a href="tess.html">
+				<img src="http://i.imgur.com/865vGWI.jpg?1" />
+				<div class="photoinfo2">
+					<h1>Tess Christensen</h1>
+					<p>B.S. Soil and Crop Science, CCA</p>
+					<p>Colorado State University</p>
+				</div>
+			</a>
+			</div>
+			</div>
+			<div class="twopersoncontainer">
+			<div class="photo1"><a href="kirk.html">
+				<img src="http://i.imgur.com/cd2FijQ.jpg?1" />
+				<div class="photoinfo1">
+					<h1>Kirk Thompson</h1>
+					<p>M.S. Agricultural Engineering,</p>
+					<p>B.S. Agricultural Engineering</p>
+					<p>CCA, P.E.</p>
+					<p>Colorado State University</p>
+				</div>
+			</a>
+			</div>
+			<div class="photo2"><a href="jeannine.html">
+				<img src="http://i.imgur.com/x2isCNC.jpg?2" />
+				<div class="photoinfo2">
+					<h1>Jeannine Willett</h1>
+					<p>B.S. Bio-Agricultural Sciences</p>
+					<p>CCA</p>
+					<p>Colorado State University</p>
+				</div>
+			</a>
+			</div>
+			</div>
+			<div class="twopersoncontainer">
+			<div class="photo1"><a href="jessica.html">
+				<img src="http://i.imgur.com/kSU8luF.jpg?1" />
+				<div class="photoinfo1">
+					<h1>Jessica Barnett</h1>
+					<p>B.S. Biological & Agricultural Engineering</p>
+					<p>B.S. Agronomy</p>
+					<p>E.I.T. & CCA</p>
+					<p>Kansas State University</p>
+				</div>
+			</a>
+			</div>
+			<div class="photo2"><a href="jason.html">
+				<img src="http://i.imgur.com/phxcuzS.jpg?1" />
+				<div class="photoinfo2">
+					<h1>Jason Lorenz</h1>
+					<p>B.S. in Agricultural Engineering</p>
+					<p>M.S. in Agricultural Engineering</p>
+					<p>P.E.</p>
+					<p>Colorado State University</p>
+				</div>
+			</a>
+			</div>
+			</div>
+	</div>
+	<div class="footer">
+		<div class="container_footer">
+			<div>
+				<ul>
+					<p> Copyright Agro Engineering Inc. 2016</p>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>

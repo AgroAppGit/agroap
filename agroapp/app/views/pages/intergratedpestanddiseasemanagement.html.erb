@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<link type="text/css" rel="stylesheet" href="indexstyle.css" />
+	<title>IPM</title>
+</head>
+<body>
+	<div class="pagetop">
+		<div class="pagetop_pic">
+			<a href="http://www.agro.com"><img src="http://i.imgur.com/ii4SpRt.jpg" /></a>
+		</div>
+		<% if current_user %>
+		<ul>
+			<li><%= link_to "Log out", logout_path, method: "delete" %></li>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="contactus.html">Contact Us</a></li>
+			<li><a href="aboutus.html">About Us</a></li>
+			<li><a href="services.html">Services</a></li>
+			<li><a href="ourstaff.html">Our Staff</a></li>
+			<li><a href="weather.html">Weather</a></li>
+			<li><a href="Resources.html">Resources</a></li>
+			<li><a href="ipmlinks.html">IPM Links</a></li>
+		</ul>
+		<% else %>
+		<ul>
+			<li><a href="clientlogin.html">Client Login</a></li>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="contactus.html">Contact Us</a></li>
+			<li><a href="aboutus.html">About Us</a></li>
+			<li><a href="services.html">Services</a></li>
+			<li><a href="ourstaff.html">Our Staff</a></li>
+			<li><a href="weather.html">Weather</a></li>
+			<li><a href="Resources.html">Resources</a></li>
+			<li><a href="ipmlinks.html">IPM Links</a></li>
+		</ul>
+		<% end %>
+	</div>
+	<div class="specificservicestitle">
+		<h1>Integrated Disease and Pest Management</h1>
+	</div>
+	<div class="specificservicedescription">
+		<p>Plant protection involves the timely identification and control of insect pests, weeds and diseases based on economic significance of infestations. Agro Engineering provides integrated pest and disease management services, including field monitoring, establishment of action thresholds and development of control measures. We have developed plant protection programs for potatoes (commercial and seed), small grains, alfalfa, and lettuce.</p>
+
+		<p>Agro Engineering also executes the San Luis Valley Green Peach Aphid Suppression Program, through which overwintering hosts of this aphid are sprayed and summer aphid levels are monitored across the Valley. This program saves input costs for Valley potato producers by reducing chemical pest control amounts.</p>
+
+		<p>The IPM and disease management programs offered contain all or some of the following options: </p>
+		<ul>
+			<li>Insect population monitoring</li>
+			<li>Recommendations for insect control when levels reach economic thresholds</li>
+			<li>Identification of weed species and locations </li>
+			<li>Recommendations for proper weed control and follow-up</li>
+			<li>Timely identification of diseases and their magnitude </li>
+			<li>Recommendations for disease control</li>
+			<li>Calculation of percent stand and spacing</li>
+			<li>Possible causes of stand losses and recommendations for improvements</li>
+			<li>Assistance with fertilizer or pesticide injection, as requested </li>
+			<li>Soil microbe analysis, to determine presence of nematodes and fungal pathogens in the soil</li>
+		</ul>
+	</div>
+	<div class="returntoservicesbutton">
+		<a href="services.html">Return To All Services</a>
+	</div>
+	<div class="footer">
+		<div class="container_footer">
+			<div>
+				<ul>
+					<p> Copyright Agro Engineering Inc. 2016</p>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
