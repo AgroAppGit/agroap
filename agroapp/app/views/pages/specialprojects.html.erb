@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<link type="text/css" rel="stylesheet" href="indexstyle.css" />
+	<title>Special Projects</title>
+</head>
+<body>
+	<div class="pagetop">
+		<div class="pagetop_pic">
+			<a href="http://www.agro.com"><img src="http://i.imgur.com/ii4SpRt.jpg" /></a>
+		</div>
+		<% if current_user %>
+		<ul>
+			<li><%= link_to "Log out", logout_path, method: "delete" %></li>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="contactus.html">Contact Us</a></li>
+			<li><a href="aboutus.html">About Us</a></li>
+			<li><a href="services.html">Services</a></li>
+			<li><a href="ourstaff.html">Our Staff</a></li>
+			<li><a href="weather.html">Weather</a></li>
+			<li><a href="Resources.html">Resources</a></li>
+			<li><a href="ipmlinks.html">IPM Links</a></li>
+		</ul>
+		<% else %>
+		<ul>
+			<li><a href="clientlogin.html">Client Login</a></li>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="contactus.html">Contact Us</a></li>
+			<li><a href="aboutus.html">About Us</a></li>
+			<li><a href="services.html">Services</a></li>
+			<li><a href="ourstaff.html">Our Staff</a></li>
+			<li><a href="weather.html">Weather</a></li>
+			<li><a href="Resources.html">Resources</a></li>
+			<li><a href="ipmlinks.html">IPM Links</a></li>
+		</ul>
+		<% end %>
+	</div>
+	<div class="specificservicestitle">
+		<h1>Special Projects</h1>
+	</div>
+	<div class="specificservicedescription">
+		<h1>Rio Grande River Headwaters Restoration</h1>
+		<p>Agro Engineering, Inc. teamed with Montgomery Watson HARZA, was selected by the San Luis Valley Water Conservancy District and Colorado Water Conservation Board to prepare a plan for enhancing 90 stream miles of the Rio Grande river in southern Colorado. The river is an important source of agricultural water supply, and has over 60 points of diversion. It is also strategically located on a major waterfowl migration route, and supports important wetlands, state wildlife areas, and two federal wildlife refuges. The purpose of the restoration plan was to develop acceptable approaches for enhancing the value of the river corridor according to six objectives:</p>
+		<ul>
+			<li>Improve the efficiency of irrigation diversions</li>
+			<li>Improve the habitat values in the riparian corridor</li>
+			<li>Improve the ability to convey Rio Grande Compact flows to New Mexico</li>
+			<li>Maintain flood-carrying capacity</li>
+			<li>Protect floodplain areas from flood damage</li>
+			<li>Improve streambank stability</li>
+		</ul>
+		<p>The project involved preparing a detailed GIS inventory of existing conditions (land use, diversions, channel conditions, water rights, problem areas, etc.). Existing conditions were assessed based on parameters related to hydraulics, geomorphology, vegetation, and other components. Problem areas were identified and prioritized. For high-priority problem areas, specific recommended solutions were developed. For low-priority areas, a menu of feasible solutions was prepared from which specific solutions can be selected at a later date. Structural alternatives included bioengineered bank stabilization measures, improved irrigation headgates, re-establishing historical meanders, creating dedicated overflow areas, combining irrigation headgates, and local levee projects. Non-structural recommendations included establishing a River Task Force (watershed group), riparian corridor buffers, grazing management, improved floodplain management ordinances, flood hazard mitigation plans, and upstream watershed management practices.</p>
+		<h1>Willow Creek Flood Control and Restoration</h1>
+		<p>Agro Engineering, Inc. was selected by the Willow Creek Reclamation Committee and Colorado Water Conservation Board to prepare a flood control and restoration plan for Upper Willow Creek in southwestern Colorado. Upper Willow Creek, which includes East and West Willow Creeks, flows through the historic Creede mining district in the San Juan Mountains of southwestern Colorado prior to flowing into the Rio Grande River. The town of Creede and numerous historic mining areas are located within the Willow Creek floodplain. The stream has been impacted significantly by historic mining practices.</p>
+		<p>The primary goal of the project is to quantify the risk of flooding within the area and develop approaches to reduce the risk of flooding and property damage from Upper Willow Creek, control debris and sediment problems associated with the Willow Creek watershed, and improve the aesthetic qualities, habitat conditions, and physical functioning of the stream. The study was divided into phases for analysis of problems, development of mitigation strategies, and prioritization and development of an implementation plan.</p>
+		<p>In the problem analysis phase, Agro Engineering surveyed area topography and developed a comprehensive hydraulic model using the Army Corps of Engineers HEC-RAS model. Over three miles of the stream were modeled with 104 cross-sections and numerous hydraulic structures. Flood inundations were delineated and the risk of flooding was evaluated throughout the reach. Potential sediment transport rates were also evaluated within the reach using information from the hydraulic analysis. In addition, Agro Engineering developed aerial photo mosaics to identify sediment sources within the watershed and evaluate the sediment production potential of watershed areas using GIS.</p>
+		<p>After identifying potential problem areas, a list of appropriate mitigation strategies was developed. These strategies include replacement of culverts, small extensions of levees, construction of a flood bypass around mine tailings, construction of sedimentation and debris basins, watershed sediment source controls, channel enhancements using vortex weirs and willow plantings, and reshaping and restoration of a stream reach. </p>
+	</div>
+	<div class="returntoservicesbutton">
+		<a href="services.html">Return To All Services</a>
+	</div>
+	<div class="footer">
+		<div class="container_footer">
+			<div>
+				<ul>
+					<p> Copyright Agro Engineering Inc. 2016</p>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>

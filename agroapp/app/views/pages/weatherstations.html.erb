@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<link type="text/css" rel="stylesheet" href="indexstyle.css" />
+	<title>Weather Station Locations</title>
+</head>
+<body>
+	<div class="pagetop">
+		<div class="pagetop_pic">
+			<a href="http://www.agro.com"><img src="http://i.imgur.com/ii4SpRt.jpg" /></a>
+		</div>
+		<% if current_user %>
+		<ul>
+			<li><%= link_to "Log out", logout_path, method: "delete" %></li>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="contactus.html">Contact Us</a></li>
+			<li><a href="aboutus.html">About Us</a></li>
+			<li><a href="services.html">Services</a></li>
+			<li><a href="ourstaff.html">Our Staff</a></li>
+			<li><a href="weather.html">Weather</a></li>
+			<li><a href="Resources.html">Resources</a></li>
+			<li><a href="ipmlinks.html">IPM Links</a></li>
+		</ul>
+		<% else %>
+		<ul>
+			<li><a href="clientlogin.html">Client Login</a></li>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="contactus.html">Contact Us</a></li>
+			<li><a href="aboutus.html">About Us</a></li>
+			<li><a href="services.html">Services</a></li>
+			<li><a href="ourstaff.html">Our Staff</a></li>
+			<li><a href="weather.html">Weather</a></li>
+			<li><a href="Resources.html">Resources</a></li>
+			<li><a href="ipmlinks.html">IPM Links</a></li>
+		</ul>
+		<% end %>
+	</div>
+	<div class="linkstoweatherpages">
+		<ul>
+			<li><a href="weathercurrent.html">Current Weather</a></li>
+			<li><a href="weatherpastweek.html">Daily Data for Past Week</a></li>
+			<li><a href="weatherstations.html">Station Locations</a></li>
+			<li><a href="weather.html">Weather Home</a></li>
+		</ul>
+	</div>
+	<div class="weatherlocations">
+		<div class="stationpic">
+		<img src="http://i.imgur.com/voTRHdB.jpg" />
+		</div>
+		<div class="stattiondetails">
+		<h3>Agro Office (Agro1)</h3>
+		<p>County Line & Rd 2 South between Alamosa and Monte Vista</p>
+		<h3>Center Station (Agro2)</h3>
+		<p>Road 51 between Roads B & C northeast of Center</p>
+		<h3>Saguache Station (Agro3)</h3>
+		<p>Located between Roads 54 and 55 on Road AA east of Saguache</p>
+		<h3>Mosca Station (Agro4)</h3>
+		<p>On the 9 North between Highway 17 and County Road 10, just east of the alligator farm</p>
+		<h3>West Station (Agro5)</h3>
+		<p>Between the 4 West and 5 West and between the 7 North and 8 North northwest of Monte Vista.</p>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="container_footer">
+			<div>
+				<ul>
+					<p> Copyright Agro Engineering Inc. 2016</p>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>

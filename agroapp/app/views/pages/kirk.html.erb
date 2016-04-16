@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<link type="text/css" rel="stylesheet" href="indexstyle.css" />
+	<title>Kirk Thompson</title>
+</head>
+<body>
+	<div class="pagetop">
+		<div class="pagetop_pic">
+			<a href="http://www.agro.com"><img src="http://i.imgur.com/ii4SpRt.jpg" /></a>
+		</div>
+		<% if current_user %>
+		<ul>
+			<li><%= link_to "Log out", logout_path, method: "delete" %></li>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="contactus.html">Contact Us</a></li>
+			<li><a href="aboutus.html">About Us</a></li>
+			<li><a href="services.html">Services</a></li>
+			<li><a href="ourstaff.html">Our Staff</a></li>
+			<li><a href="weather.html">Weather</a></li>
+			<li><a href="Resources.html">Resources</a></li>
+			<li><a href="ipmlinks.html">IPM Links</a></li>
+		</ul>
+		<% else %>
+		<ul>
+			<li><a href="clientlogin.html">Client Login</a></li>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="contactus.html">Contact Us</a></li>
+			<li><a href="aboutus.html">About Us</a></li>
+			<li><a href="services.html">Services</a></li>
+			<li><a href="ourstaff.html">Our Staff</a></li>
+			<li><a href="weather.html">Weather</a></li>
+			<li><a href="Resources.html">Resources</a></li>
+			<li><a href="ipmlinks.html">IPM Links</a></li>
+		</ul>
+		<% end %>
+	</div>
+	<div class="shortbio">
+		<img src="http://i.imgur.com/cd2FijQ.jpg?1" />
+		<div class="shortbiostuff">
+		<h1>Kirk Thompson</h1>
+		<p>Specialty Areas-- Water Rights, Water Resources, Irrigation Water Management, Crop Fertility Recommendations, Irrigation System Testing, Nozzle Package Design, and Flow Meter Certification, GIS and Remote Sensing, Satellite Imagery Processing and Image Classification, Precision Agriculture</p>
+		<p>Kirk Thompson is a principle with Agro Engineering. He is a professional engineer specializing in consulting on water rights and water resource issues. Mr. Thompson also consults on irrigation water management and performs irrigation system testing and design.  He also specializes in crop fertility recommendations.  He has developed many of the computer programs at Agro Engineering and has been involved in GIS, remote sensing, and precision agriculture applications.  He supervises numerous water resource projects and water rights evaluations. Mr. Thompson has worked extensively with different ET methods and has applied this knowledge to consumptive use analysis and irrigation scheduling.</p>
+		<a href="ourstaff.html">Back to our staff</a>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="container_footer">
+			<div>
+				<ul>
+					<p> Copyright Agro Engineering Inc. 2016</p>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
