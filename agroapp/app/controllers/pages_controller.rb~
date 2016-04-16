@@ -79,5 +79,6 @@ def weatherpastweek
 end
 def weatherstations
 end
-
+def secure_page
+end
 end

@@ -9,10 +9,11 @@
 		<div class="pagetop_pic">
 			<a href="http://www.agro.com"><img src="http://i.imgur.com/ii4SpRt.jpg" /></a>
 		</div>
+		<% if current_user %>
 		<ul>
+			<li><%= link_to "Log out", logout_path, method: "delete" %></li>
 			<li><a href="index.html">Home</a></li>
 			<li><a href="contactus.html">Contact Us</a></li>
-			<li><a href="clientlogin.html">Client Login</a></li>
 			<li><a href="aboutus.html">About Us</a></li>
 			<li><a href="services.html">Services</a></li>
 			<li><a href="ourstaff.html">Our Staff</a></li>
@@ -20,6 +21,19 @@
 			<li><a href="Resources.html">Resources</a></li>
 			<li><a href="ipmlinks.html">IPM Links</a></li>
 		</ul>
+		<% else %>
+		<ul>
+			<li><a href="clientlogin.html">Client Login</a></li>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="contactus.html">Contact Us</a></li>
+			<li><a href="aboutus.html">About Us</a></li>
+			<li><a href="services.html">Services</a></li>
+			<li><a href="ourstaff.html">Our Staff</a></li>
+			<li><a href="weather.html">Weather</a></li>
+			<li><a href="Resources.html">Resources</a></li>
+			<li><a href="ipmlinks.html">IPM Links</a></li>
+		</ul>
+		<% end %>
 	</div>
 	<div class="specificservicestitle">
 		<h1>Irrigation Water Management</h1>

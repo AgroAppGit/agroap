@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
 		@user = User.find_by_farm_name(params[:session][:farm_name])
 		if @user && @user.authenticate(params[:session][:password])
 			session[:user_id] = @user.id
-			redirect_to '/'
+			redirect_to '/secure'
 		else
 			redirect_to 'login'
 		end

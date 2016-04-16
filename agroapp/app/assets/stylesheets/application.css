@@ -543,6 +543,11 @@ a{
 	background-color:#fff;
 	width:100px;
 }
+.formformatting {
+	max-width: 900px;
+	margin: 0 auto;
+	text-align: center;
+}
 .container_footer {
 	background-color: #333333;
 	padding: 0px;

@@ -9,17 +9,31 @@
 		<div class="pagetop_pic">
 			<a href="http://www.agro.com"><img src="http://i.imgur.com/ii4SpRt.jpg" /></a>
 		</div>
+		<% if current_user %>
 		<ul>
-			<li><a href="http://www.agro.com/index.html">Home</a></li>
-			<li><a href="http://www.agro.com/contactus.html">Contact Us</a></li>
-			<li><a href="http://www.agro.com/clientlogin.html">Client Login</a></li>
-			<li><a href="http://www.agro.com/aboutus.html">About Us</a></li>
-			<li><a href="http://www.agro.com/services.html">Services</a></li>
-			<li><a href="http://www.agro.com/ourstaff.html">Our Staff</a></li>
-			<li><a href="http://www.agro.com/weather.html">Weather</a></li>
-			<li><a href="http://www.agro.com/Resources.html">Resources</a></li>
-			<li><a href="http://www.agro.com/ipmlinks.html">IPM Links</a></li>
+			<li><%= link_to "Log out", logout_path, method: "delete" %></li>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="contactus.html">Contact Us</a></li>
+			<li><a href="aboutus.html">About Us</a></li>
+			<li><a href="services.html">Services</a></li>
+			<li><a href="ourstaff.html">Our Staff</a></li>
+			<li><a href="weather.html">Weather</a></li>
+			<li><a href="Resources.html">Resources</a></li>
+			<li><a href="ipmlinks.html">IPM Links</a></li>
 		</ul>
+		<% else %>
+		<ul>
+			<li><a href="clientlogin.html">Client Login</a></li>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="contactus.html">Contact Us</a></li>
+			<li><a href="aboutus.html">About Us</a></li>
+			<li><a href="services.html">Services</a></li>
+			<li><a href="ourstaff.html">Our Staff</a></li>
+			<li><a href="weather.html">Weather</a></li>
+			<li><a href="Resources.html">Resources</a></li>
+			<li><a href="ipmlinks.html">IPM Links</a></li>
+		</ul>
+		<% end %>
 	</div>
 	<div class="aphidmaplinks">
 					<p><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="5">Charts and Maps</font></p>

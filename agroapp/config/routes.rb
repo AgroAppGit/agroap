@@ -9,7 +9,7 @@ get '/aboutus' => 'pages#aboutus'
 get '/aphidnumbers' => 'pages#aphidnumbers'
 get '/appliedresearch' => 'pages#appliedresearch'
 get '/careeropportunities' => 'pages#careeropportunities'
-get '/clientlogin' => 'users#new'
+get '/clientlogin' => 'pages#clientlogin'
 get '/communityrelations' => 'pages#communityrelations'
 get '/contactus' => 'pages#contactus'
 get '/flowmetercertification' => 'pages#flowmetercertification'
@@ -44,10 +44,12 @@ get '/weather' => 'pages#weather'
 get '/weathercurrent' => 'pages#weathercurrent'
 get '/weatherpastweek' => 'pages#weatherpastweek'
 get '/weatherstations' => 'pages#weatherstations'
+get 'signup' => 'users#new'
 resources :users
 get '/login' => 'sessions#new'
 post 'login' => 'sessions#create'
 delete 'logout' => 'sessions#destroy'
+get '/secure' => 'pages#secure_page'
 
 
 

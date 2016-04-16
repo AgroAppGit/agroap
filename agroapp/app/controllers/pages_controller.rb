@@ -1,7 +1,10 @@
 class PagesController < ApplicationController
-	def home_page
-	end
-	def aboutus
+
+before_action :require_user, only: [:secure_page]
+
+def home_page
+end
+def aboutus
 end
 def aphidnumbers
 end
@@ -79,5 +82,6 @@ def weatherpastweek
 end
 def weatherstations
 end
-
+def secure_page
+end
 end
