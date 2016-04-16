@@ -34,8 +34,16 @@
 			<li><a href="ipmlinks.html">IPM Links</a></li>
 		</ul>
 		<% end %>
+	<% x = 1 %>
 	</div>
-	<h1> THIS IS SOME SECURE SHIT </h1>
+	<% Dir.glob("public/*.png").each do |f| %>
+	<p><%= link_to "#{f}", f[/\/.*/] %></p>
+	<% x +=1 %>
+	<% end %>
+	<% Dir.glob("public/*.jpg").each do |f| %>
+	<p><%= link_to "#{f}", f[/\/.*/] %></p>
+	<% x +=1 %>
+	<% end %>
 	<div class="footer">
 		<div class="container_footer">
 			<div>
