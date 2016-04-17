@@ -35,15 +35,16 @@
 		</ul>
 		<% end %>
 	</div>
- 	<% Dir.glob('public/*/').each do |f| %>
-	<% if f == ("public/"+"#{@farm_login}"+"/") %>
-	<div class= "folderlinkstyle">
-	<p><%= link_to "#{f}", f %></p>
+ 	<div>
+	<% @messages.each do |message| %> 
+	<div> 
+	<p class="grower"><%= message.grower %></p>
+  	<p class="content"><%= message.content %></p> 
+	<p class="author"><%= message.author %></p>
+  	<p class="time"><%= message.created_at %></p> 
+	</div> 
+	<% end %>
 	</div>
-	<% else %>
-	<p><%= "" %></p>
-	<% end %>
-	<% end %>
 	<div class="footer">
 		<div class="container_footer">
 			<div>

@@ -5,5 +5,10 @@ class SecureLoginController < ApplicationController
 		@farm_login = current_user.farm_login
 	end
 	def alphahay
+		@messages = Message.all
+		@farm_login = current_user.farm_login
+	end
+	def index
+		@messages = Message.all
 	end
 end

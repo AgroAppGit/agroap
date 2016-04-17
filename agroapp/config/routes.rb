@@ -1,10 +1,6 @@
 Rails.application.routes.draw do
 root 'pages#home_page'
 get '/index' => 'pages#home_page'
-get '/growernotes/index' => 'growernotes#index'
-get '/growernotes/new' => 'growernotes#new'
-post 'growernotes' => 'growernotes#create'
-resources :growernotes
 get '/aboutus' => 'pages#aboutus'
 get '/aphidnumbers' => 'pages#aphidnumbers'
 get '/appliedresearch' => 'pages#appliedresearch'
@@ -49,6 +45,9 @@ resources :users
 get '/login' => 'sessions#new'
 post 'login' => 'sessions#create'
 delete 'logout' => 'sessions#destroy'
+get '/messages' => 'messages#index'
+get '/public/alphahay/messages/new' => 'messages#new'
+post 'messages' => 'messages#create'
 get '/secure' => 'secure_login#secure_page'
 get '/public/alphahay' => 'secure_login#alphahay'
 get '/public/scidmore' => 'secure_login#scidmore'

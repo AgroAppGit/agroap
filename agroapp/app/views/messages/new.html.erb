@@ -2,16 +2,17 @@
 <html>
 <head>
 <link type="text/css" rel="stylesheet" href="indexstyle.css" />
-	<title>Client Login</title>
+	<title>Alpha Hay</title>
 </head>
 <body>
 	<div class="pagetop">
 		<div class="pagetop_pic">
-			<a href="index.html"><img src="http://i.imgur.com/ii4SpRt.jpg" /></a>
+			<a href="index"><img src="http://i.imgur.com/ii4SpRt.jpg" /></a>
 		</div>
 		<% if current_user %>
 		<ul>
 			<li><%= link_to "Log out", logout_path, method: "delete" %></li>
+			<li><%= link_to "My Information", '/secure' %></li>
 			<li><a href="index.html">Home</a></li>
 			<li><a href="contactus.html">Contact Us</a></li>
 			<li><a href="aboutus.html">About Us</a></li>
@@ -35,14 +36,16 @@
 		</ul>
 		<% end %>
 	</div>
- 	<% Dir.glob('public/*/').each do |f| %>
-	<% if f == ("public/"+"#{@farm_login}"+"/") %>
-	<div class= "folderlinkstyle">
-	<p><%= link_to "#{f}", f %></p>
-	</div>
-	<% else %>
-	<p><%= "" %></p>
-	<% end %>
+	<div class= "formformatting">
+	<%= form_for(@message) do |f| %> 
+	<%= f.label :grower %><br>
+	<%= f.text_field :grower, :value => "#{@farm_login}", :readonly => true %><br>
+	<%= f.label :message %><br> 
+	<%= f.text_area :content %><br>
+	<%= f.label :author %><br>
+    	<%= f.text_field :author %><br> 
+   	 <%= f.submit "Create" %> 
+  	</div> 
 	<% end %>
 	<div class="footer">
 		<div class="container_footer">
