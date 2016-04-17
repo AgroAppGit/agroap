@@ -49,8 +49,9 @@ resources :users
 get '/login' => 'sessions#new'
 post 'login' => 'sessions#create'
 delete 'logout' => 'sessions#destroy'
-get '/secure' => 'pages#secure_page'
-get '/public/alphahay' => 'pages#alphahay'
+get '/secure' => 'secure_login#secure_page'
+get '/public/alphahay' => 'secure_login#alphahay'
+get '/public/scidmore' => 'secure_login#scidmore'
 
 
 

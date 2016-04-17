@@ -2,7 +2,7 @@
 <html>
 <head>
 <link type="text/css" rel="stylesheet" href="indexstyle.css" />
-	<title>Client Login</title>
+	<title>Scidmore</title>
 </head>
 <body>
 	<div class="pagetop">
@@ -35,13 +35,17 @@
 		</ul>
 		<% end %>
 	</div>
- 	<% Dir.glob('public/*/').each do |f| %>
-	<% if f == ("public/"+"#{@farm_login}"+"/") %>
-	<p><%= link_to "#{f}", f %></p>
-	<% else %>
-	<p><%= "" %></p>
+	<div>
+	<% Dir.glob("public/scidmore/*.png").each do |f| %>
+	<p><%= link_to "#{f}", f[/\/.*/] %></p>
 	<% end %>
+	<% Dir.glob("public/scidmore/*.jpg").each do |f| %>
+	<p><%= link_to "#{f}", f[/\/.*/] %></p>
 	<% end %>
+	<% Dir.glob("public/scidmore/*.jpeg").each do |f| %>
+	<p><%= link_to "#{f}", f[/\/.*/] %></p>
+	<% end %>
+	</div>
 	<div class="footer">
 		<div class="container_footer">
 			<div>
