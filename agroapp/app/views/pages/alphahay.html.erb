@@ -2,7 +2,7 @@
 <html>
 <head>
 <link type="text/css" rel="stylesheet" href="indexstyle.css" />
-	<title>Client Login</title>
+	<title>Contact Us</title>
 </head>
 <body>
 	<div class="pagetop">
@@ -35,15 +35,17 @@
 		</ul>
 		<% end %>
 	</div>
-	<% Dir.glob("public/*.png").each do |f| %>
+	<div>
+	<% Dir.glob("public/alphahay/*.png").each do |f| %>
 	<p><%= link_to "#{f}", f[/\/.*/] %></p>
 	<% end %>
-	<% Dir.glob("public/*.jpg").each do |f| %>
+	<% Dir.glob("public/alphahay/*.jpg").each do |f| %>
 	<p><%= link_to "#{f}", f[/\/.*/] %></p>
 	<% end %>
- 	<% Dir.glob('public/*/').each do |f| %>
-	<p><%= link_to "#{f}", f %></p>
+	<% Dir.glob("public/alphahay/*.jpeg").each do |f| %>
+	<p><%= link_to "#{f}", f[/\/.*/] %></p>
 	<% end %>
+	</div>
 	<div class="footer">
 		<div class="container_footer">
 			<div>

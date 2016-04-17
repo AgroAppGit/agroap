@@ -50,6 +50,7 @@ get '/login' => 'sessions#new'
 post 'login' => 'sessions#create'
 delete 'logout' => 'sessions#destroy'
 get '/secure' => 'pages#secure_page'
+get '/public/alphahay' => 'pages#alphahay'
 
 
 

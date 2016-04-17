@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
 	before_action :require_user, only: [:secure_page]
+	before_action :require_alphahay, only: [:alphahay]
 	def home_page
 	end
 	def aboutus
@@ -81,5 +82,7 @@ class PagesController < ApplicationController
 	def weatherstations
 	end
 	def secure_page
+	end
+	def alphahay
 	end
 end
