@@ -10,7 +10,7 @@ end
 def require_user
 	redirect_to '/login' unless current_user
 end
-def require_alphahay
-	redirect_to '/login' unless current_user.farm_login=='alphahay'
+def require_security
+	redirect_to '/login' unless '/public/'+current_user.farm_login == @security || current_user.farm_login == "agro"
 end
 end

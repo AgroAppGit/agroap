@@ -1,4 +1,6 @@
 <!doctype html>
+	<% @farm_id = request.fullpath %>
+	<% @farm_id[0..7] = '' %>
 <html>
 <head>
 <link type="text/css" rel="stylesheet" href="indexstyle.css" />
@@ -7,7 +9,7 @@
 <body>
 	<div class="pagetop">
 		<div class="pagetop_pic">
-			<a href="index.html"><img src="http://i.imgur.com/ii4SpRt.jpg" /></a>
+			<%= link_to image_tag("http://i.imgur.com/ii4SpRt.jpg"), '/index' %>
 		</div>
 		<% if current_user %>
 		<ul>
@@ -41,28 +43,28 @@
 	<h3>Information</h3>
 	<h4>Aerials and other jpgs.</h4>
 	<ul>
-	<% Dir.glob("public/alphahay/*.jpg").each do |f| %>
+	<% Dir.glob("public/#{@farm_id}/*.jpg").each do |f| %>
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
 	<h4>ET Data, Petioles, and other PDFs</h4>
 	<ul>
-	<% Dir.glob("public/alphahay/*.pdf").each do |f| %>
+	<% Dir.glob("public/#{@farm_id}/*.pdf").each do |f| %>
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
 	<h4>Everything</h4>
 	<ul>
-	<% Dir.glob("public/alphahay/*").each do |f| %>
+	<% Dir.glob("public/#{@farm_id}/*").each do |f| %>
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
 	</div>
 
 	<div class= "messagearea">
- 	<p class= "newnotelink"><%= link_to "Write a note", 'messages/new' %></p>
+ 	<p class= "newnotelink"><%= link_to "Write a note", '/messages/new' %></p>
 	<% @messages.each do |message| %> 
-		<% if message.grower == "#{@farm_login}" %>
+		<% if message.grower == "#{@farm_id}" %>
 		<div class= "messagearealoop">
   		<p><%= message.content %><br><%= "--"+message.author %><br><%= message.created_at %></p>
 		</div>

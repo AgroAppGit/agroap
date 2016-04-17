@@ -9,7 +9,7 @@ end
 def create
 	@message = Message.new(message_params)
 	if @message.save
-		redirect_to '/public/'+current_user.farm_login+'/'
+		redirect_to '/secure'
 	else
 	render 'new'
 	end
