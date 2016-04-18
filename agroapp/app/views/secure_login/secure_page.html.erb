@@ -36,17 +36,17 @@
 		<% end %>
 	</div>
 	<% if @farm_login != "agro" %>
- 	<% Dir.glob('public/*/').each do |f| %>
+ 	<% Dir.glob('public/*/').sort.each do |f| %>
 	<% if f == ("public/"+"#{@farm_login}"+"/") %>
 	<div class= "folderlinkstyle">
-	<p><%= link_to "#{f}", f %></p>
+	<p><%= link_to "#{@farm_login}", f %></p>
 	</div>
 	<% else %>
 	<p><%= "" %></p>
 	<% end %>
 	<% end %>
 	<% else %>
-	<% Dir.glob('public/*/').each do |f| %>
+	<% Dir.glob('public/*/').sort.each do |f| %>
 	<div class= "folderlinkstyle">
 	<p><%= link_to "#{f}", f %></p>
 	</div>

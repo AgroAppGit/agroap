@@ -42,6 +42,7 @@ get '/weatherpastweek' => 'pages#weatherpastweek'
 get '/weatherstations' => 'pages#weatherstations'
 get 'signup' => 'users#new'
 resources :users
+post 'users' => 'secure_login#secure_page'
 get '/login' => 'sessions#new'
 post 'login' => 'sessions#create'
 delete 'logout' => 'sessions#destroy'
@@ -49,6 +50,7 @@ get '/messages' => 'messages#index'
 get '/messages/new' => 'messages#new'
 post 'messages' => 'messages#create'
 get '/secure' => 'secure_login#secure_page'
+get '/public/agro' => 'secure_login#agro'
 get '/public/:farm_name' => 'secure_login#generic'
 
   # The priority is based upon order of creation: first created -> highest priority.

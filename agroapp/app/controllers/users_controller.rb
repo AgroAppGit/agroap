@@ -4,12 +4,12 @@ class UsersController < ApplicationController
 	end
 	def create
 		@user = User.new(user_params)
-		if @user.save
-			session[:user_id] = @user.id
-			redirect_to '/secure'
-		else
-			redirect_to '/signup'
-		end
+			if @user.save && @user.valid?
+				session[:user_id] = @user.id
+				redirect_to '/secure'
+			else
+				redirect_to '/login'
+			end
 	end
 private
 def user_params

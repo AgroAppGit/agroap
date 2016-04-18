@@ -1,0 +1,16 @@
+This is a compilation of notes on how to use this ruby on rails webserver and databases.
+Specifically for Agro Engineering.
+
+Adding a new client.
+	Create client login and password via the site.
+	Create a folder in /public/ with their farm_name as the title of the folder.
+	Place a blank document called "tracer" in it so github tracks this folder.
+	Everything else should track along with their farm name.
+
+Posting a note to everyone
+	Log in as agro
+	Go to post a note
+	Post note under the farm "allgrowers"
+	whatever is written will be posted to everyone.
+
+
