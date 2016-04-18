@@ -146,6 +146,7 @@ get '/public/westernlabs' => 'secure_login#westernlabs'
 get '/public/westernsky' => 'secure_login#westernsky'
 get '/public/worleyseed' => 'secure_login#worleyseed'
 get '/public/zapata' => 'secure_login#zapata'
+get '/public/agro' => 'secure_login#agro'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
