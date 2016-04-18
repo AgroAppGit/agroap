@@ -1,5 +1,6 @@
 class SecureLoginController < ApplicationController
 	before_action :require_user, only: [:secure_page]
+	before_action :require_agro, only: [:destroy]
 	def secure_page
 		@farm_login = current_user.farm_login
 	end
@@ -18,5 +19,7 @@ class SecureLoginController < ApplicationController
 	end
 	def index
 		@messages = Message.all
+	end
+	def delete_user
 	end
 end

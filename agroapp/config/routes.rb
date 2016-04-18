@@ -52,6 +52,7 @@ post 'messages' => 'messages#create'
 get '/secure' => 'secure_login#secure_page'
 get '/public/agro' => 'secure_login#agro'
 get '/public/:farm_name' => 'secure_login#generic'
+get '/delete_user' => 'secure_login#delete_user'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

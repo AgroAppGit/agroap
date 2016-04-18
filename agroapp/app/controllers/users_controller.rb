@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+	before_action :require_agro, only: [:destroy]
 	def new
 		@user = User.new
 	end
