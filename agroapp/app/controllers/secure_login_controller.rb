@@ -4,13 +4,6 @@ class SecureLoginController < ApplicationController
 	def secure_page
 		@farm_login = current_user.farm_login
 	end
-	def agro
-		@user = User.all
-		@messages = Message.all
-		@farm_login = current_user.farm_login
-		@security = request.fullpath
-		redirect_to '/login' unless '/public/'+current_user.farm_login == @security || current_user.farm_login == "agro"
-	end
 	def generic
 		@messages = Message.all.order('created_at DESC')
 		@farm_login = current_user.farm_login
@@ -20,6 +13,5 @@ class SecureLoginController < ApplicationController
 	def index
 		@messages = Message.all
 	end
-	def delete_user
-	end
+
 end

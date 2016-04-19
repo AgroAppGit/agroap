@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-	before_action :require_agro, only: [:destroy]
+	before_action :require_agro, only: [:index, :destroy]
 	def new
 		@user = User.new
 	end
@@ -11,6 +11,14 @@ class UsersController < ApplicationController
 			else
 				redirect_to '/login'
 			end
+	end
+	def index
+		@users = User.all
+	end
+	def destroy
+		User.find(params[:id]).destroy
+		flash[:success] = "User deleted"
+		redirect_to '/public/agro'
 	end
 private
 def user_params

@@ -41,10 +41,7 @@
 	<h3>Users</h3>
 	<ul>
 	<% @user.each do |f| %>
-	<li>
-	<%= f.farm_name %>
-	<%= link_to "Delete this User", f, method: :delete %>
-	</li>
+	<li><%= f.farm_name %><%= link_to "Delete", controller: 'users_controller', action: 'destroy', farm_name: @removeduser.farm_name, method: :delete %></li>
 	<% end %>
 	</ul>
 	</div>
