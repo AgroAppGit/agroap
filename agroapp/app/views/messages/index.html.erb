@@ -37,12 +37,13 @@
 		<% end %>
 	</div>
  	<div>
-	<% @messages.each do |message| %> 
+	<% @messages.each do |f| %> 
 	<div> 
-	<p class="grower"><%= message.grower %></p>
-  	<p class="content"><%= message.content %></p> 
-	<p class="author"><%= message.author %></p>
-  	<p class="time"><%= message.created_at %></p> 
+	<p class="grower"><%= f.grower %></p>
+  	<p class="content"><%= f.content %></p> 
+	<p class="author"><%= f.author %></p>
+  	<p class="time"><%= f.created_at %></p> 
+	<%= link_to "Delete this Message", f, method: :delete %>
 	</div> 
 	<% end %>
 	</div>

@@ -78,10 +78,13 @@
 	<div class= "messagearea">
  	<p class= "newnotelink"><%= link_to "Write a note", '/messages/new' %></p>
 	<% message_limit = 1 %>
-	<% @messages.each do |message| %> 
-			<% if (message.grower == "#{@farm_id}" || message.grower == "allgrowers") && message_limit <10 %>
+	<% @messages.each do |f| %> 
+			<% if (f.grower == "#{@farm_id}" || f.grower == "allgrowers") && message_limit <10 %>
 			<div class= "messagearealoop">
-  			<p><%= message.content %><br><span id = "message_author"><%= "--"+message.author %></span><br><span id = "message_create_time"><%= message.created_at %></span></p>
+  			<p><%= f.content %><br>
+			<span id = "message_author"><%= "--"+f.author %></span><br>
+			<span id = "message_create_time"><%= f.created_at %></span>
+			</p>
 			</div>
 			<% message_limit += 1 %>
 			<% else%>

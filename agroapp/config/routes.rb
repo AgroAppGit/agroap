@@ -52,6 +52,8 @@ post 'messages' => 'messages#create'
 get '/secure' => 'secure_login#secure_page'
 get '/public/agro' => 'users#index'
 get '/public/:farm_name' => 'secure_login#generic'
+get '/messages/index' => 'messages#index'
+resources :messages
 
 
 
