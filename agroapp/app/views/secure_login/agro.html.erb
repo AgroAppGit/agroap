@@ -38,15 +38,10 @@
 	</div>
 	<div class = "linkandmessagearea">
 	<div class= "informationlinkstyle">
-	<h3>Users</h3>
-	<ul>
-	<% @user.each do |f| %>
-	<li>
-	<%= f.farm_name %>
-	<%= link_to "Delete this User", f, method: :delete %>
-	</li>
-	<% end %>
-	</ul>
+	<p><%= link_to "Back to client folders", '/secure' %></p>
+	<p><%= link_to "View and Edit Users", '/users/index' %></p>
+	<p><%= link_to "View and Edit Messages", '/messages/index' %></p>
+	<p><%= link_to "Write a note", '/messages/new' %></p>
 	</div>
 	</div>
 	<div class="footer">

@@ -1,6 +1,6 @@
 class MessagesController < ApplicationController
 def index
-	@messages = Message.all
+	@messages = Message.all.order('created_at DESC')
 end
 def new
 	@message = Message.new
@@ -18,7 +18,7 @@ end
 	def destroy
 		Message.find(params[:id]).destroy
 		flash[:success] = "User deleted"
-		redirect_to '/public/agro'
+		redirect_to '/messages/index'
 	end
 private
 	def message_params

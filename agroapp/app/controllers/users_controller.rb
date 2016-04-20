@@ -20,6 +20,9 @@ class UsersController < ApplicationController
 		flash[:success] = "User deleted"
 		redirect_to '/public/agro'
 	end
+	def show
+		@users = User.all
+	end
 private
 def user_params
 	params.require(:user).permit(:farm_name, :password)

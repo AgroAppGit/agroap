@@ -50,10 +50,11 @@ get '/messages' => 'messages#index'
 get '/messages/new' => 'messages#new'
 post 'messages' => 'messages#create'
 get '/secure' => 'secure_login#secure_page'
-get '/public/agro' => 'users#index'
+get '/public/agro' => 'secure_login#agro'
 get '/public/:farm_name' => 'secure_login#generic'
 get '/messages/index' => 'messages#index'
 resources :messages
+get '/users/index' => 'users#index'
 
 
 

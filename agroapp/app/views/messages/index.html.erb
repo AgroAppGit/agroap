@@ -36,16 +36,18 @@
 		</ul>
 		<% end %>
 	</div>
- 	<div>
+ 	<div >
 	<% @messages.each do |f| %> 
 	<div> 
-	<p class="grower"><%= f.grower %></p>
-  	<p class="content"><%= f.content %></p> 
-	<p class="author"><%= f.author %></p>
-  	<p class="time"><%= f.created_at %></p> 
-	<%= link_to "Delete this Message", f, method: :delete %>
+	<div>
+			<span id = "message_farm_name"><%= f.grower %></span><br>
+  			<span id = "message_content_agro"><%= f.content %><span><br>
+			<span id = "message_author"><%= "--"+f.author %></span><br>
+			<span id = "message_create_time"><%= f.created_at %></span><br>
+	<%= link_to "Delete this Message", f, method: :delete %><br><br>
 	</div> 
 	<% end %>
+	<%= link_to "Back to Agro Dashboard", '/public/agro' %>
 	</div>
 	<div class="footer">
 		<div class="container_footer">
