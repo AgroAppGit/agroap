@@ -2,7 +2,7 @@
 lock '3.4.1'
 
 set :application, 'Agro_app'
-set :repo_url, 'git@github.com:AgroAppGit/agroap.git'
+set :repo_url, 'https://github.com/AgroAppGit/agroap.git'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
