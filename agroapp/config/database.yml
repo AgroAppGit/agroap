@@ -21,7 +21,4 @@ test:
   database: db/test.sqlite3
 
 production:
- adapter: postgresql
- databse: agro_app
- username: agro_app
- password: xenshonx1
+  adapter: sqlite3
