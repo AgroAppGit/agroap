@@ -1,0 +1,63 @@
+// Place all the styles related to the secure_login controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.folderlinkstyle{
+	font-size: 1.5em;
+	max-width: 900px;
+	margin:0 auto;
+	text-align: center;
+}
+.linkandmessagearea{
+	width: 100%;
+	margin:0 auto;
+	width: 900px;
+	color: #ccc;
+}
+.informationlinkstyle{
+	font-size: 1.1em;
+	float:left;
+	max-width:300px;
+}
+.messagesarea{
+	color: #ccc;
+	float:right;
+	text-align:right;
+	max-width:450px;
+	clear:right;
+	position:relative;
+}
+.messagearealoop{
+	color: #ccc;
+	float:right;
+	text-align:right;
+	max-width: 450px;
+	clear:right;
+	position:relative;
+}
+.newnotelink{
+	text-align:right;
+	border: 2px solid #ccc;
+	color: #333;
+	border-radius: 3px;
+	float:right;
+	width: 180px;
+	font-size: 2em;
+}
+#message_create_time{
+	color: #0096FD;
+}
+#message_author{
+	color: #FBFE65;
+}
+#farm_header{
+	width:100%;
+	font-size: 2em;
+	max-width: 900px;
+	margin:0 auto;
+	text-align: center;
+	color: #ccc;
+}
+#author_field{
+	color: black;
+}
