@@ -17,7 +17,7 @@ end
 
 	def destroy
 		Message.find(params[:id]).destroy
-		flash[:success] = "User deleted"
+		flash[:success] = "Message deleted"
 		redirect_to '/messages/index'
 	end
 private
