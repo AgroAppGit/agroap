@@ -20,3 +20,5 @@
 *.rbc
 *~
 
+database.yml
+secrets.yml

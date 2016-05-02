@@ -45,7 +45,7 @@ resources :users
 post 'users' => 'secure_login#secure_page'
 get '/login' => 'sessions#new'
 post 'login' => 'sessions#create'
-get '/logout' => 'sessions#destroy', :as => :logout
+delete 'logout' => 'sessions#destroy', :as => :logout
 get '/messages' => 'messages#index'
 get '/messages/new' => 'messages#new'
 post 'messages' => 'messages#create'
