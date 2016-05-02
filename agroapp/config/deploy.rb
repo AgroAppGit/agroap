@@ -40,7 +40,6 @@ set :linked_files, %w{config/database.yml}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
 namespace :deploy do
-  Rake::Task['db:setup'].invoke
   desc 'Restart application'
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
