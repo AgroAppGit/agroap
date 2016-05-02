@@ -563,3 +563,97 @@ a{
 	text-transform: uppercase;
 	color: #ccc;
 }
+#message_content_agro{
+	color: #ccc;
+}
+#message_farm_name{
+	color: #ccc;
+}
+#etforecast{
+	color: black;
+	border: 2px solid blue;
+	background-color:#fff;
+	width:100px;
+}
+#securitybuttons{
+	max-width: 900px;
+	margin: 0 auto;
+	color: #fff;
+}
+#loginbutton {
+	background-color: #333;
+	color: #fff;
+	border: 2px solid #fff;
+	width: 200px;
+	font-weight: 30;
+	font-size: 2em;
+	border-radius: 5px;
+}
+#signupbutton {
+	background-color: #333;
+	color: #fff;
+	border: 2px solid #fff;
+	width: 200px;
+	font-weight: 30;
+	border-radius: 5px;
+	font-size: .8em;
+}
+.folderlinkstyle{
+	font-size: 1.5em;
+	max-width: 900px;
+	margin:0 auto;
+	text-align: center;
+}
+.linkandmessagearea{
+	width: 100%;
+	margin:0 auto;
+	width: 900px;
+	color: #ccc;
+}
+.informationlinkstyle{
+	font-size: 1.1em;
+	float:left;
+	max-width:300px;
+}
+.messagesarea{
+	color: #ccc;
+	float:right;
+	text-align:right;
+	max-width:450px;
+	clear:right;
+	position:relative;
+}
+.messagearealoop{
+	color: #ccc;
+	float:right;
+	text-align:right;
+	max-width: 450px;
+	clear:right;
+	position:relative;
+}
+.newnotelink{
+	text-align:right;
+	border: 2px solid #ccc;
+	color: #333;
+	border-radius: 3px;
+	float:right;
+	width: 180px;
+	font-size: 2em;
+}
+#message_create_time{
+	color: #0096FD;
+}
+#message_author{
+	color: #FBFE65;
+}
+#farm_header{
+	width:100%;
+	font-size: 2em;
+	max-width: 900px;
+	margin:0 auto;
+	text-align: center;
+	color: #ccc;
+}
+#author_field{
+	color: black;
+}
