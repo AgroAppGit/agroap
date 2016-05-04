@@ -45,7 +45,7 @@
 	<h3>ET Data</h3>
 	<ul>
 	<% Dir.glob("public/#{@farm_id}/CropWaterUseSummary.pdf").each do |f| %>
-	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<li><%= link_to "public/#{f}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
 	<h3>Aerials</h3>
