@@ -71,7 +71,7 @@
 	<ul>
 	<% Dir.glob("public/#{@farm_id}/*").each do |f| %>
 	<% @farmpathid = request.fullpath %>
-	<li><%= link_to "#{farmpathid}", f[/\/.*/] %></li>
+	<li><%= link_to "#{@farmpathid}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
 	</div>
