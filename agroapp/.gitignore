@@ -20,5 +20,5 @@
 *.rbc
 *~
 
-database.yml
-secrets.yml
+agroapp/config/database.yml
+agroapp/config/secrets.yml
