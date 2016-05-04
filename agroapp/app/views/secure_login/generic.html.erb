@@ -38,7 +38,6 @@
 	</div>
 	<% @farm_id = request.fullpath %>
 	<% @farm_id[0..7] = '' %>
-	<% @farmpathid = request.fullpath %>
 	<div id = "farm_header"><%= "#{@farm_id}" %></div>
 	<div class = "linkandmessagearea">
 	<div class= "informationlinkstyle">
@@ -70,8 +69,9 @@
 	</ul>
 	<h3>Everything</h3>
 	<ul>
-	<% Dir.glob(@farmpathid).each do |f| %>
-	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% Dir.glob("public/#{@farm_id}/*").each do |f| %>
+	<% @farmpathid = request.fullpath %>
+	<li><%= link_to "#{farmpathid}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
 	</div>
