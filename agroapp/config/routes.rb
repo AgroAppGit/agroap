@@ -54,6 +54,7 @@ get '/public/agro' => 'secure_login#agro'
 get '/public/:farm_name' => 'secure_login#generic'
 get '/messages/index' => 'messages#index'
 resources :messages
+resources :sessions
 get '/users/index' => 'users#index'
 
 
