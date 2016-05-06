@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+	<%= javascript_include_tag 'http://vps-1174206-24586.manage.myhosting.com/application.js' %>
+
+	<title>Agro Engineering Inc.</title>
+</head>
+<body>
+	<div class="pagetop">
+		<div class="pagetop_pic">
+			<%= link_to image_tag("http://i.imgur.com/ii4SpRt.jpg"), '/index' %>
+		</div>
+		<% if current_user %>
+		<ul>
+			<li><%= link_to "Log out", logout_path, method: "delete" %></li>
+			<li><%= link_to "My Information", '/secure' %></li>
+			<li><%= link_to "Home", '/index' %></li>
+			<li><%= link_to "Contact Us", '/contactus' %></li>
+			<li><%= link_to "About Us", '/aboutus' %></li>
+			<li><%= link_to "Services", '/services' %></li>
+			<li><%= link_to "Our Staff", '/ourstaff' %></li>
+			<li><%= link_to "Weather", '/weather' %></li>
+			<li><%= link_to "Resources", '/Resources' %></li>
+			<li><%= link_to "IPM Links", '/ipmlinks' %></li>
+		</ul>
+		<% else %>
+		<ul>
+			<li><a href="clientlogin.html">Client Login</a></li>
+			<li><%= link_to "Home", '/index' %></li>
+			<li><%= link_to "Contact Us", '/contactus' %></li>
+			<li><%= link_to "About Us", '/aboutus' %></li>
+			<li><%= link_to "Services", '/services' %></li>
+			<li><%= link_to "Our Staff", '/ourstaff' %></li>
+			<li><%= link_to "Weather", '/weather' %></li>
+			<li><%= link_to "Resources", '/Resources' %></li>
+			<li><%= link_to "IPM Links", '/ipmlinks' %></li>
+		</ul>
+		<% end %>
+	</div>
+	<div class="picturetop">
+		<div class="picoverlay">
+			<div class="subjects">
+			<h1>Agro Engineering</h1>
+			<p>Comprehensive Agricultural Engineering</p>
+			</div>
+		</div>
+	</div>
+	<div class="splitbar">
+			<ul>
+				<li><h1>Grow</h1><p>Better crops with our agronomists</p></li>
+				<li><h1>Water</h1><p>More accurately to conserve</p></li>
+				<li><h1>Design</h1><p>Your systems for success</p></li>
+			</ul>
+	</div>
+	<div class="picturemidtop">
+		<div class="picoverlay">
+			<div class="subjects">
+			<h1>Teamwork</h1>
+			<p>Utilizing experts from multiple fields to provide the best service</p>
+			</div>
+		</div>
+	</div>
+	<div class="splitbar">
+			<ul>
+				<li><h1>Pests</h1><p>Control disease and pests</p></li>
+				<li><h1>Fertility</h1><p>Improve crop health from the soil up</p></li>
+	</div>
+	<div class="picturebot">
+		<div class="picoverlay">
+			<div class="subjects">
+			<h1>Precision</h1>
+			<p>Using powerful tools to grow your operation</p>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="container_footer">
+			<div>
+				<ul>
+					<p> Copyright Agro Engineering Inc. 2016</p>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
