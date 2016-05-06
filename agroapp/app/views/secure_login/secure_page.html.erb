@@ -36,8 +36,8 @@
 		<% end %>
 	</div>
 	<% if @farm_login != "agro" %>
- 	<% Dir.glob('agroapp/app/public/*/').sort.each do |f| %>
-	<% if f == ("agroapp/app/public/"+"#{@farm_login}"+"/") %>
+ 	<% Dir.glob('app/public/*/').sort.each do |f| %>
+	<% if f == ("app/public/"+"#{@farm_login}"+"/") %>
 	<div class= "folderlinkstyle">
 	<p><%= link_to "#{@farm_login}", f %></p>
 	</div>
@@ -46,7 +46,7 @@
 	<% end %>
 	<% end %>
 	<% else %>
-	<% Dir.glob('agroapp/app/public/*/').sort.each do |f| %>
+	<% Dir.glob('app/public/*/').sort.each do |f| %>
 	<div class= "folderlinkstyle">
 	<p><%= link_to "#{f}", f %></p>
 	</div>
