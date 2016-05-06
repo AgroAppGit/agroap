@@ -70,7 +70,8 @@
 	<h3>Everything</h3>
 	<ul>
 	<% Dir.glob("public/#{@farm_id}/*").each do |f| %>
-	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% @farmpathid = request.fullpath %>
+	<li><%= link_to "#{@farmpathid}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
 	</div>
