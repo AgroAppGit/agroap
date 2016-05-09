@@ -56,6 +56,8 @@ get '/messages/index' => 'messages#index'
 resources :messages
 resources :sessions
 get '/users/index' => 'users#index'
+get '/mobilelogin' => 'sessions#mobilelogin'
+post 'mobilelogin' => 'sessions#mobilelogin'
 
 
 
