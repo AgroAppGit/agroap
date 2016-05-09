@@ -72,13 +72,13 @@ a{
 	text-decoration: none;
 }
 .picturetop {
-	background: url(http://i.imgur.com/lzmfvlh.jpg);
+	background: url(/agropics/inthebarley.jpg);
 }
 .picturemidtop{
-	background: url(http://i.imgur.com/gqpR1Bm.jpg?1);
+	background: url(/agropics/cloudsandsprinklers.jpg);
 }
 .picturebot {
-	background: url(http://i.imgur.com/r6cgZ5W.jpg);
+	background: url(/agropics/mountainphoto.jpg);
 }
 .picturetop, .picturebot, .picturemidtop{
   	background-size: 100% ;
@@ -372,46 +372,46 @@ a{
 	text-decoration: none;
 }
 .iwm{
-	background: url("http://i.imgur.com/Fjp1vKJ.jpg?3");
+	background: url("/agropics/iwm.jpg");
 }
 .irrigationdesign{
-	background: url("http://i.imgur.com/gpvgqgC.jpg?2");
+	background: url("/agropics/irrigationdesign.jpg");
 }
 .ipm{
-	background: url("http://i.imgur.com/odQXFon.jpg?2");
+	background: url("ipm.jpg");
 }
 .flowmetercert{
-	background: url("http://i.imgur.com/3fI9zYQ.jpg?1");
+	background: url("/agropics/flowmeter.jpg");
 }
 .planttissue{
-	background: url("http://i.imgur.com/ichKJLV.png?2");
+	background: url("/agropics/planttissueanalysis.png");
 }
 .soilfertility{
-	background: url("http://i.imgur.com/PSJ4U3z.jpg?2");
+	background: url("/agropics/soilfert.jpg");
 }
 .training{
-	background: url("http://i.imgur.com/fUEZnli.jpg?2");
+	background: url("/agropics/training.jpg");
 }
 .waterrights{
-	background: url("http://i.imgur.com/Wi2sqX0.jpg?1");
+	background: url("/agropics/waterrights.jpg");
 }
 .harvestevaluation{
-	background: url("http://i.imgur.com/FhcEOMV.jpg?2");
+	background: url("/agropics/harvesteval.png");
 }
 .aerial{
-	background: url('http://i.imgur.com/oiEG6NT.png?1');
+	background: url('/agropics/aerials.png');
 }
 .appliedresearch{
-	background: url("http://i.imgur.com/tXsHmAb.jpg?2");
+	background: url("/agropics/appliedresearch.png");
 }
 .storageevaluation{
-	background: url("http://i.imgur.com/MX4mZy3.jpg?2");
+	background: url("/agropics/storageevaluation.jpg");
 }
 .remotesensing{
-	background: url("http://i.imgur.com/FKet1Cw.jpg?2");
+	background: url("/agropics/gisandsatellite.jpg");
 }
 .specialprojects{
-	background: url("http://i.imgur.com/rcqwCM0.jpg?2");
+	background: url("/agropics/specialprojects.jpg");
 }
 .specificservicestitle{
 	clear: both;
