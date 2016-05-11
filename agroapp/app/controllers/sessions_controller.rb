@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
 			redirect_to '/secure'
 			end
 		else
-			redirect_to 'login'
+			redirect_to '/app/public/agro'
 		end
 	end
 	def destroy
