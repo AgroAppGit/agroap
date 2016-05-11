@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
 			if @farm_login != 'agro'
 			redirect_to '/app/public/'+@farm_login
 			else
-			redirect_to 'secure'
+			redirect_to '/secure'
 			end
 		else
 			redirect_to '/login'
