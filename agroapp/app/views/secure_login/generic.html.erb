@@ -45,14 +45,14 @@
 	<h3>ET Data</h3>
 	<ul>
 	<% Dir.glob("app/public/#{@farm_id}/CropWaterUseSummary.pdf").each do |f| %>
-	<% f[0..9] = '' %>
-	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% r = (f[0..9] = '') %>
+	<li><%= link_to "#{r}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
 	<h3>Petioles</h3>
 	<ul>
 	<% Dir.glob("app/public/#{@farm_id}/*anp.pdf").each && Dir.glob("app/public/#{@farm_id}/*micro.pdf").each do |f| %>
-	<% f[0..9] = '' %>
+	<% r = (f[0..9] = '') %>
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
