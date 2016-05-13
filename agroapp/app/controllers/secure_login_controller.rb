@@ -13,4 +13,10 @@ class SecureLoginController < ApplicationController
 	def index
 		@messages = Message.all
 	end
+	def mobilesecure
+		@messages = Message.all.order('created_at DESC')
+		@farm_login = current_user.farm_login
+	end
+	def mobilegeneric
+	end
 end

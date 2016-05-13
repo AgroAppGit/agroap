@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+
+	<title>"#{@farm_login}"</title>
+</head>
+<body>
+	<div class="pagetop">
+		<div class="pagetop_pic">
+			<%= link_to image_tag("http://i.imgur.com/ii4SpRt.jpg"), '/index' %>
+		</div>
+		<% if current_user %>
+		<ul>
+			<li><%= link_to "Log out", logout_path, method: "delete" %></li>
+			<li><%= link_to "My Information", '/secure' %></li>
+			<li><%= link_to "Home", '/index' %></li>
+			<li><%= link_to "Contact Us", '/contactus' %></li>
+			<li><%= link_to "About Us", '/aboutus' %></li>
+			<li><%= link_to "Services", '/services' %></li>
+			<li><%= link_to "Our Staff", '/ourstaff' %></li>
+			<li><%= link_to "Weather", '/weather' %></li>
+			<li><%= link_to "Resources", '/Resources' %></li>
+			<li><%= link_to "IPM Links", '/ipmlinks' %></li>
+		</ul>
+		<% else %>
+		<ul>
+			<li><a href="clientlogin.html">Client Login</a></li>
+			<li><%= link_to "Home", '/index' %></li>
+			<li><%= link_to "Contact Us", '/contactus' %></li>
+			<li><%= link_to "About Us", '/aboutus' %></li>
+			<li><%= link_to "Services", '/services' %></li>
+			<li><%= link_to "Our Staff", '/ourstaff' %></li>
+			<li><%= link_to "Weather", '/weather' %></li>
+			<li><%= link_to "Resources", '/Resources' %></li>
+			<li><%= link_to "IPM Links", '/ipmlinks' %></li>
+		</ul>
+		<% end %>
+	</div>
+	<% @farm_id = request.fullpath %>
+	<% @farm_id[0..11] = '' %>
+	<div id = "farm_header"><%= "#{@farm_id}" %></div>
+	<div class = "linkandmessagearea">
+	<div class= "informationlinkstyle">
+	<h2>Information</h2>
+	<h3>ET Data</h3>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_id}/CropWaterUseSummary*").each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
+	<h3>Petioles</h3>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_id}/*anp.pdf").each && Dir.glob("app/public/#{@farm_id}/*micro.pdf").each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
+	<h3>Aerials</h3>
+	<h4>Crop Health</h4>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_id}/CHI*").each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
+	<h4>Infrareds</h4>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_id}/FCIR*").each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
+	<h3>Engineering</h3>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_id}/engi*").each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
+	<h3>Everything</h3>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_id}/*").each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
+	</div>
+
+	<div class= "messagearea">
+ 	<p class= "newnotelink"><%= link_to "Write a note", '/messages/new' %></p>
+	<% message_limit = 1 %>
+	<% @messages.each do |f| %> 
+			<% if (f.grower == "#{@farm_id}" || f.grower == "allgrowers") && message_limit <10 %>
+			<div class= "messagearealoop">
+  			<p><%= f.content %><br>
+			<span id = "message_author"><%= "--"+f.author %></span><br>
+			<span id = "message_create_time"><%= f.created_at %></span>
+			</p>
+			</div>
+			<% message_limit += 1 %>
+			<% else%>
+			<%= "" %>
+			<% end %>
+	<% end %>
+	</div>
+	<div class="footer">
+		<div class="container_footer">
+			<div>
+				<ul>
+					<p> Copyright Agro Engineering Inc. 2016</p>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>

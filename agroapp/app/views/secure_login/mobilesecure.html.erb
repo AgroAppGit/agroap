@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+
+	<title>Client Login</title>
+</head>
+<body>
+	<div class="pagetop">
+		<div class="pagetop_pic">
+			<a href="index.html"><img src="http://i.imgur.com/ii4SpRt.jpg" /></a>
+		</div>
+	</div>
+	<% if @farm_login != "agro" %>
+ 	<% @farm_id = request.fullpath %>
+	<% @farm_id[0..11] = '' %>
+	<div id = "farm_header"><%= "#{@farm_login}" %></div>
+	<div class = "linkandmessagearea">
+	<div class= "informationlinkstyle">
+	<h2>Information</h2>
+	<h3>ET Data</h3>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_login}/CropWaterUseSummary*").each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
+	<h3>Petioles</h3>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_login}/*anp.pdf").each && Dir.glob("app/public/#{@farm_login}/*micro.pdf").each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
+	<h3>Aerials</h3>
+	<h4>Crop Health</h4>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_login}/CHI*").each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
+	<h4>Infrareds</h4>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_login}/FCIR*").each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
+	<h3>Engineering</h3>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_login}/engi*").each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
+	<h3>Everything</h3>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_login}/*").each do |f| %>
+	<li><%= link_to "#{f}", '/app'+f[/\/.*/] %></li>
+	<% end %>
+	</ul>
+	</div>
+
+	<div class= "messagearea">
+ 	<p class= "newnotelink"><%= link_to "Write a note", '/messages/new' %></p>
+	<% message_limit = 1 %>
+	<% @messages.each do |f| %> 
+			<% if (f.grower == "#{@farm_login}" || f.grower == "allgrowers") && message_limit <10 %>
+			<div class= "messagearealoop">
+  			<p><%= f.content %><br>
+			<span id = "message_author"><%= "--"+f.author %></span><br>
+			<span id = "message_create_time"><%= f.created_at %></span>
+			</p>
+			</div>
+			<% message_limit += 1 %>
+			<% else%>
+			<%= "" %>
+			<% end %>
+	<% end %>
+	<% else %>
+	<p><%= "" %></p>
+	<% end %>
+	<div class="footer">
+		<div class="container_footer">
+			<div>
+				<ul>
+					<p> Copyright Agro Engineering Inc. 2016</p>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>

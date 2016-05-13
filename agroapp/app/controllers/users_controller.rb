@@ -18,7 +18,7 @@ class UsersController < ApplicationController
 	def destroy
 		User.find(params[:id]).destroy
 		flash[:success] = "User deleted"
-		redirect_to '/secure'
+		redirect_to '/app/public/agro'
 	end
 	def show
 		@users = User.all
