@@ -13,7 +13,7 @@
 	<% if @farm_login != "agro" %>
  	<% @farm_id = request.fullpath %>
 	<% @farm_id[0..11] = '' %>
-	<div id = "farm_header"><%= "#{@farm_login}" %></div>
+	<div id = "mobilefarm_header"><%= "#{@farm_login}" %></div>
 	<div class = "linkandmessagearea">
 	<div class= "informationlinkstyle">
 	<h2>Information</h2>
@@ -55,7 +55,7 @@
 	<% message_limit = 1 %>
 	<% @messages.each do |f| %> 
 			<% if (f.grower == "#{@farm_login}" || f.grower == "allgrowers") && message_limit <10 %>
-			<div class= "messagearealoop">
+			<div class= "mobilemessagearealoop">
   			<p><%= f.content %><br>
 			<span id = "message_author"><%= "--"+f.author %></span><br>
 			<span id = "message_create_time"><%= f.created_at %></span>

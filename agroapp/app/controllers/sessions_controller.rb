@@ -24,7 +24,11 @@ class SessionsController < ApplicationController
 		if @user && @user.authenticate(params[:session][:password])
 			session[:user_id] = @user.id
 			@farm_login = current_user.farm_login
+			if @farm_login != 'agro'
 				redirect_to '/app/public/mobilesecure'
+			else
+				redirect_to '/secure'
+			end
 		else
 			redirect_to '/login'
 		end
