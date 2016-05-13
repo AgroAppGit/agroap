@@ -48,12 +48,6 @@
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
-	<h3>Everything</h3>
-	<ul>
-	<% Dir.glob("app/public/#{@farm_login}/*").each do |f| %>
-	<li><%= link_to "#{f}", '/app'+f[/\/.*/] %></li>
-	<% end %>
-	</ul>
 	</div>
 
 	<div class= "messagearea">
