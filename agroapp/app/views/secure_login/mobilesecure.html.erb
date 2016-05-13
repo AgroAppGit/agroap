@@ -50,8 +50,8 @@
 	</ul>
 	</div>
 
-	<div class= "messagearea">
- 	<p class= "newnotelink"><%= link_to "Write a note", '/messages/new' %></p>
+	<div class= "mobilemessagearea">
+ 	<p class= "mobilenewnotelink"><%= link_to "Write a note", '/messages/new' %></p>
 	<% message_limit = 1 %>
 	<% @messages.each do |f| %> 
 			<% if (f.grower == "#{@farm_login}" || f.grower == "allgrowers") && message_limit <10 %>
