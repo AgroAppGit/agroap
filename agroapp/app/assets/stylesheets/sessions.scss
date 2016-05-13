@@ -1,3 +1,23 @@
 // Place all the styles related to the Sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.formformatting{
+	height:300px;
+	width:300px;
+}
+#session_farm_name{
+	width:100%;
+	height:33%;
+}
+#session_password{
+	width:100%;
+	height:33%;
+}
+#session_submit{
+	width:100%;
+	height:33%;
+}
+.mobileloginfooter{
+	position:relative;
+	margin-top:450px;
+}
