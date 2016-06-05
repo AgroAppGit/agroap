@@ -9,23 +9,15 @@
 		<div class="pagetop_pic">
 			<%= link_to image_tag("http://i.imgur.com/ii4SpRt.jpg"), '/index' %>
 		</div>
-		<% @url = request.original_url %>
-		<h1>Mobile Login</h1>
-		<% @url = @url[-11,11] %>
-		<% if @url == 'mobilelogin' %>
-		<% mobilecounter = 1 %>
-		<% else %>
-		<% mobilecounter = 0 %>
-		<% end %>
 	</div>
+	<%= form_for(:session, :url => url_for(:controller => 'sessions', :action => 'createmobilelogin')) do |f| %>
 	<div class= "formformatting">
-	<%= form_for(:session, url: login_path) do |f| %>
-	<%= f.text_field :farm_name, :placeholder => "Farm Name" %><br>
+	<%= f.text_field :farm_name, :placeholder => "Farm Name"%><br>
 	<%= f.password_field :password, :placeholder => "Password" %><br>
-	<%= f.submit "Log in" %>
-	<% end %>
+	<%= f.submit "Log in", :id => "session_submit" %>
 	</div>
-	<div class="footer">
+	<% end %>
+	<div class="mobileloginfooter">
 		<div class="container_footer">
 			<div>
 				<ul>
