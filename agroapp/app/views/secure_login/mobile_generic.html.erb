@@ -50,7 +50,12 @@
 	</ul>
 	<h3>Petioles</h3>
 	<ul>
-	<% Dir.glob("app/public/#{@farm_id}/*anp.pdf").each && Dir.glob("app/public/#{@farm_id}/*micro.pdf").each do |f| %>
+	<% Dir.glob("app/public/#{@farm_id}/*Anp.pdf").each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_id}/*micro.pdf").each do |f| %>
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
