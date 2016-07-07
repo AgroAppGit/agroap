@@ -53,6 +53,18 @@
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
+	<h3>Field Notes</h3>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_login}/Note*").each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
+	<h3>Recommendations</h3>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_login}/Rec*").each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
 	</div>
 
 	<div class= "mobilemessagearea">

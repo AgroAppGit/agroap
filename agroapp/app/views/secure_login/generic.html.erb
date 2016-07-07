@@ -78,9 +78,15 @@
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
-	<h3>Everything</h3>
+	<h3>Field Notes</h3>
 	<ul>
-	<% Dir.glob("app/public/#{@farm_id}/*").each do |f| %>
+	<% Dir.glob("app/public/#{@farm_id}/Note*").each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
+	<h3>Recommendations</h3>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_id}/Rec*").each do |f| %>
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
