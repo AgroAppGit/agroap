@@ -42,9 +42,21 @@
 	<div class = "linkandmessagearea">
 	<div class= "informationlinkstyle">
 	<h2>Information</h2>
-	<h3>ET Data</h3>
+	<h3>Irrigation and ET Data</h3>
 	<ul>
 	<% Dir.glob("app/public/#{@farm_id}/CropWaterUseSummary*").each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
+	<h4>Weekly Irrigation Schedule</h4>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_id}/sched*").each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
+	<h4>Irrigation Summary</h4>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_id}/sum*").each do |f| %>
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
@@ -84,7 +96,7 @@
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
-	<h3>Recommendations</h3>
+	<h3>Chemical Recommendations</h3>
 	<ul>
 	<% Dir.glob("app/public/#{@farm_id}/Rec*").each do |f| %>
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
