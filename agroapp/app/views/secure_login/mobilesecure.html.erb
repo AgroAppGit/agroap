@@ -17,7 +17,19 @@
 	<div class = "linkandmessagearea">
 	<div class= "mobileinformationlinkstyle">
 	<h2>Information</h2>
-	<h3>ET Data</h3>
+	<h3>Irrigation and ET Data</h3>
+	<h4>Weekly Irrigation Schedule</h4>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_login}/sched*").each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
+	<h4>Irrigation Summary</h4>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_login}/sum*").each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
 	<ul>
 	<% Dir.glob("app/public/#{@farm_login}/CropWaterUseSummary*").each do |f| %>
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
