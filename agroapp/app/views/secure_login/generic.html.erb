@@ -43,6 +43,7 @@
 	<div class= "informationlinkstyle">
 	<h2>Information</h2>
 	<h3>Irrigation and ET Data</h3>
+	<h4>Crop Water Use Summary</h4>
 	<ul>
 	<% Dir.glob("app/public/#{@farm_id}/CropWaterUseSummary*").each do |f| %>
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>

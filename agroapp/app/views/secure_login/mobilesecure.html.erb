@@ -30,6 +30,7 @@
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
+	<h4>Crop Water Use Summary</h4>
 	<ul>
 	<% Dir.glob("app/public/#{@farm_login}/CropWaterUseSummary*").each do |f| %>
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
