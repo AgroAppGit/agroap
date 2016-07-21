@@ -617,10 +617,10 @@ a{
 }
 .messagesarea{
 	color: #ccc;
-	float:right;
-	text-align:right;
+	float:left;
+	text-align:left;
 	max-width:450px;
-	clear:right;
+	clear:both;
 	position:relative;
 }
 .messagearealoop{
