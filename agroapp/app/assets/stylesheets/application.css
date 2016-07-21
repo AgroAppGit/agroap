@@ -613,22 +613,22 @@ a{
 .informationlinkstyle{
 	font-size: 1.1em;
 	float:left;
-	max-width:300px;
+	max-width:850px;
 }
 .messagesarea{
 	color: #ccc;
 	float:left;
 	text-align:left;
-	max-width:450px;
-	clear:both;
+	max-width:850px;
+	clear:left;
 	position:relative;
 }
 .messagearealoop{
 	color: #ccc;
-	float:right;
-	text-align:right;
-	max-width: 450px;
-	clear:right;
+	float:left;
+	text-align:left;
+	max-width: 850px;
+	clear:left;
 	position:relative;
 }
 .newnotelink{
