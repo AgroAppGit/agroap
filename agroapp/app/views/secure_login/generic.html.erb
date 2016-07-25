@@ -93,7 +93,12 @@
 	</ul>
 	<h3>Field Notes</h3>
 	<ul>
-	<% Dir.glob("app/public/#{@farm_id}/Note*") || ("app/public/#{@farm_id}/note*").each do |f| %>
+	<% Dir.glob("app/public/#{@farm_id}/Note*").each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_id}/Note*").each do |f| %>
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
