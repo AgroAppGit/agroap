@@ -16,27 +16,28 @@
 	<div id = "mobilefarm_header"><%= "#{@farm_login}" %></div>
 	<div class = "linkandmessagearea">
 	<div class= "mobileinformationlinkstyle">
-	<h2>Information</h2>
-	<h3>Irrigation and ET Data</h3>
-	<h4>Weekly Irrigation Schedule</h4>
+	<h1 id = "informationheader">Information</h1>
+	<h2 id = "informationheader">Irrigation and ET Data</h2>
+	<h3 id = "informationsubheader">Weekly Irrigation Schedule</h3>
 	<ul>
 	<% Dir.glob("app/public/#{@farm_login}/sched*").each do |f| %>
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
-	<h4>Irrigation Summary</h4>
+	<h3 id = "informationsubheader">Irrigation Summary</h3>
 	<ul>
 	<% Dir.glob("app/public/#{@farm_login}/sum*").each do |f| %>
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
-	<h4>Crop Water Use Summary</h4>
+	<h3 id = "informationsubheader">Crop Water Use Summary</h3>
 	<ul>
 	<% Dir.glob("app/public/#{@farm_login}/CropWaterUseSummary*").each do |f| %>
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
-	<h3>Petioles</h3>
+	<h2 id = "informationheader">Crop and Soil Fertility</h2>
+	<h3 id = "informationsubheader">Petioles</h3>
 	<ul>
 	<% Dir.glob("app/public/#{@farm_login}/*Anp.pdf").each do |f| %>
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
@@ -47,28 +48,57 @@
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
-	<h3>Aerials</h3>
-	<h4>Crop Health</h4>
+	<h3 id = "informationsubheader">Fertility Recommendations</h3>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_login}/*FertilityRecommendation.pdf").each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_login}/*FarmSummary.pdf").each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_login}/*FertilizerMaterials").each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
+	<h2 id = "informationheader">Aerials</h2>
+	<h3 id = "informationsubheader">Crop Health</h3>
 	<ul>
 	<% Dir.glob("app/public/#{@farm_login}/CHI*").each do |f| %>
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
-	<h4>Infrareds</h4>
+	<h3 id = "informationsubheader">Infrareds</h3>
 	<ul>
 	<% Dir.glob("app/public/#{@farm_login}/FCIR*").each do |f| %>
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
-	<h3>Engineering</h3>
+	<h2 id = "informationheader">Irrigation System Design</h2>
+	<h3 id = "informationheader">Percent Charts</h3>
 	<ul>
-	<% Dir.glob("app/public/#{@farm_login}/engi*").each do |f| %>
+	<% Dir.glob("app/public/#{@farm_login}/Pchart*").each do |f| %>
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
-	<h3>Field Notes</h3>
+	<h3 id = "informationheader">Nozzle Charts</h3>
 	<ul>
-	<% Dir.glob("app/public/#{@farm_login}/Note*").each do |f| %>
+	<% Dir.glob("app/public/#{@farm_login}/Nozzle*").each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
+	<h3 id = "informationheader">Engineering</h3>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_login}/Engi*").each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
+	<h2 id = "informationheader">Field Notes</h2>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_login}/Note*" || "app/public/#{@farm_login}/note*").each do |f| %>
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
@@ -77,7 +107,7 @@
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
-	<h3>Recommendations</h3>
+	<h2 id = "informationheader">Recommendations</h2>
 	<ul>
 	<% Dir.glob("app/public/#{@farm_login}/Rec*").each do |f| %>
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
