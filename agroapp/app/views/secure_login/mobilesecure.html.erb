@@ -18,6 +18,12 @@
 	<div class= "mobileinformationlinkstyle">
 	<h1 id = "informationheader">Information</h1>
 	<h2 id = "informationheader">Irrigation and ET Data</h2>
+	<h3 id = "informationsubheader">Crop Water Use Summary</h3>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_login}/CropWaterUseSummary*").sort.each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
 	<h3 id = "informationsubheader">Weekly Irrigation Schedule</h3>
 	<ul>
 	<% Dir.glob("app/public/#{@farm_login}/sched*").each do |f| %>
@@ -27,12 +33,6 @@
 	<h3 id = "informationsubheader">Irrigation Summary</h3>
 	<ul>
 	<% Dir.glob("app/public/#{@farm_login}/sum*").sort.each do |f| %>
-	<li><%= link_to "#{f}", f[/\/.*/] %></li>
-	<% end %>
-	</ul>
-	<h3 id = "informationsubheader">Crop Water Use Summary</h3>
-	<ul>
-	<% Dir.glob("app/public/#{@farm_login}/CropWaterUseSummary*").sort.each do |f| %>
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
@@ -78,7 +78,7 @@
 	<% end %>
 	</ul>
 	<h2 id = "informationheader">Irrigation System Design</h2>
-	<h3 id = "informationheader">Percent Charts</h3>
+	<h3 id = "informationsubheader">Percent Charts</h3>
 	<ul>
 	<% Dir.glob("app/public/#{@farm_login}/Pchart*").sort.each do |f| %>
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
@@ -87,7 +87,7 @@
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
-	<h3 id = "informationheader">Nozzle Charts</h3>
+	<h3 id = "informationsubheader">Nozzle Charts</h3>
 	<ul>
 	<% Dir.glob("app/public/#{@farm_login}/Nozzle*").sort.each do |f| %>
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
@@ -102,7 +102,7 @@
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
-	<h2 id = "informationheader">Field Notes</h2>
+	<h2 id = "informationsubheader">Field Notes</h2>
 	<ul>
 	<% Dir.glob("app/public/#{@farm_login}/Note*").sort.each do |f| %>
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
