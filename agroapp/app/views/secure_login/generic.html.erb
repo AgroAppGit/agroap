@@ -127,11 +127,6 @@
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
-	<ul>
-	<% Dir.glob("app/public/#{@farm_id}/note*").each do |f| %>
-	<li><%= link_to "#{f}", f[/\/.*/] %></li>
-	<% end %>
-	</ul>
 	<h2 id = "informationheader">Chemical Recommendations</h2>
 	<ul>
 	<% Dir.glob("app/public/#{@farm_id}/Rec*").each do |f| %>
