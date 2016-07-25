@@ -68,7 +68,7 @@
 	</ul>
 	<h3>Field Notes</h3>
 	<ul>
-	<% Dir.glob("app/public/#{@farm_login}/Note*" || "app/public/#{@farm_login}/note*").each do |f| %>
+	<% Dir.glob("app/public/#{@farm_login}/Note*") || ("app/public/#{@farm_login}/note*").each do |f| %>
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
