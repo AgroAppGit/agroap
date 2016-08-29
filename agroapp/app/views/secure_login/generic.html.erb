@@ -153,6 +153,7 @@
 
 	<div class= "messagearea">
  	<p class= "newnotelink"><%= link_to "Write a note", '/messages/new' %></p>
+	<h2 id = "informationheader">Notes</h2>
 	<% message_limit = 1 %>
 	<% @messages.each do |f| %> 
 			<% if (f.grower == "#{@farm_id}" || f.grower == "allgrowers") && message_limit <10 %>
