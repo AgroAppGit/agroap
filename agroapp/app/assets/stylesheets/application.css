@@ -91,6 +91,9 @@ a{
 	text-align: center;
 	margin: 0 auto;
 }
+.picoverlay p {
+	max-width: 900px;
+}
 .subjects {
 	padding: 20px 0px 0px 0px;
 	font-family: Arial;
