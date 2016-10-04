@@ -59,6 +59,8 @@ resources :sessions
 get '/users/index' => 'users#index'
 get '/mobilelogin' => 'sessions#mobilelogin'
 post 'mobilelogin' => 'sessions#createmobilelogin'
+get '/storageconsulting' => 'pages#storageconsulting'
+
 
 
 

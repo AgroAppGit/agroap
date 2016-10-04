@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<%= stylesheet_link_tag 'application' %>
+	<title>Storage Consulting</title>
+</head>
+<body>
+	<div class="pagetop">
+		<div class="pagetop_pic">
+			<%= link_to image_tag("http://i.imgur.com/ii4SpRt.jpg"), '/index' %>
+		</div>
+		<% if current_user %>
+		<ul>
+			<li><%= link_to "Log out", logout_path, method: "delete" %></li>
+			<li><%= link_to "My Information", '/secure' %></li>
+			<li><%= link_to "Home", '/index' %></li>
+			<li><%= link_to "Contact Us", '/contactus' %></li>
+			<li><%= link_to "About Us", '/aboutus' %></li>
+			<li><%= link_to "Services", '/services' %></li>
+			<li><%= link_to "Our Staff", '/ourstaff' %></li>
+			<li><%= link_to "Weather", '/weather' %></li>
+			<li><%= link_to "Resources", '/Resources' %></li>
+			<li><%= link_to "IPM Links", '/ipmlinks' %></li>
+		</ul>
+		<% else %>
+		<ul>
+			<li><a href="clientlogin.html">Client Login</a></li>
+			<li><%= link_to "Home", '/index' %></li>
+			<li><%= link_to "Contact Us", '/contactus' %></li>
+			<li><%= link_to "About Us", '/aboutus' %></li>
+			<li><%= link_to "Services", '/services' %></li>
+			<li><%= link_to "Our Staff", '/ourstaff' %></li>
+			<li><%= link_to "Weather", '/weather' %></li>
+			<li><%= link_to "Resources", '/Resources' %></li>
+			<li><%= link_to "IPM Links", '/ipmlinks' %></li>
+		</ul>
+		<% end %>
+	</div>
+	<div class="specificservicestitle">
+		<h1>Storage Consulting</h1>
+	</div>
+	<div class="specificservicedescription">
+		<p>Agro Engineering offers the most comprehensive storage services in the San Luis Valley. Using the newest technology to keep you better informed about your potato storages and a variety of service levels to give you the service you want. Agro engineering now offers a full service package with daily checks and the option to have us contract repairs as needed which means you can spend your winter relaxing. As always we continue to offer our weekly checks of storages at an extremeley reasonable cost. Another new service we offer is a one time in depth inspection and set up of your potato storage.</p>
+		<h2>Daily Checks--</h2>
+		<p>Storage status checks every weekday which includes; <br>Daily inspection of the panel box information and monitoring of temperatures. <br>Manually reduce set points for smooth cool down or adjust program of storage daily. <br>Will check all equipment to ensure everything is functioning and will contract out repairs for broken equipment. <br>Frequent plenum relative humidity checks.<p>
+		<p>Weekly in depth storage checks during the cool down period which includes;<br>Walk the potato piles to check for disease, areas of condensation, and establish a temperature gradient. <br>Check panel box to compare sensor temperatures to measured temperatures.<br>Walk the plenum to check for areas of standing water, broken equipment, and broken tubes.<br>Make recommendations on cool down rate that will limit shrinkage of crop. <br>Chemical recommendations and recommendations on adding fans to specific parts of the pile and other storage condition adjustments.
+</p>
+		<p>Storage structure inspection once a season which includes;<br>Will do a detailed inspection of air flow in tubes once storage is full and running to evaluate potential problem spots caused by poor airflow.<br>Detailed inspection to the exterior of the storage to look for places of poor insulation and air leaks that will cost money during cool down period, and can cause to freezing in deep winter.
+</p>
+		<h2>Weekly Checks--</h2>
+		<p>Walk the potato piles to check for disease, areas of condensation, and establish a temperature gradient. <br>Check panel box to compare sensor temperatures to measured temperatures.<br>Walk the plenum to check for areas of standing water, broken equipment, and broken tubes.<br>Make recommendations on cool down rate that will limit shrinkage of crop. <br>Chemical recommendations and recommendations on adding fans to specific parts of the pile and other storage condition adjustments.
+</p>
+		<h2>Storage Audit and Adjustment--</h2>
+		<p>One time check on storage structure and design which includes;<br>Will do a detailed inspection of air flow in tubes once storage is full and running to evaluate potential problem spots caused by poor airflow.<br>Detailed inspection to the exterior of the storage to look for places of poor insulation and air leaks that will cost money during cool down period, and can cause freeze damage in deep winter.<br>Sensor comparison to current measured values. We compare our temperature readings to the calibrated sensors to observe any measurement drift.<br>Detailed inspection of storage for pile gradient, humidity, and disease inspection.</p>
+		<h2>Our Technology</h2>
+		<p>Usually used to inspect houses for cooling and heating issues, the FLIR thermal camera offers a powerful tool for visualizing potato storage conditions. This tool is useful for both internal and external inspection of storages. With a thermal sensitivity that allows for distinctions in temperatures of less than 0.06 degrees Celsius (0.1 degrees Fahrenheit) we can now help assess problems with potato pile temperature, but also with storage structure problems. Inside the storage we can monitor and visualize the piles temperature gradients and patterns naturally caused by storage conditions along with the problem spots caused by condensation, blocked pipes, and disease. Externally we are capable of evaluating places where cold air enters the storage during the cool down period and where warm air escapes in the depths of winter. With this can help target locations that need extra insulation to reduce the costs of cooldown and to help prevent freezing. With this tool we can better help clients save cooling costs, reduce storage shrinkage, and scout for disease spread over the storage period.</p>
+
+		<div class="aboutuspic">
+			<img src="/agropics/outsideofstoragedoor.jpg" />
+		</div>
+		<div class="aboutuspic">
+			<img src="/agropics/potatostoragehotspot.jpg" />
+		</div>
+	</div>
+	<div class="returntoservicesbutton">
+		<a href="services.html">Return To All Services</a>
+	</div>
+	<div class="footer">
+		<div class="container_footer">
+			<div>
+				<ul>
+					<p> Copyright Agro Engineering Inc. 2016</p>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
