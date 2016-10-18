@@ -32,6 +32,7 @@ get '/soilfertilityandrecommendations' => 'pages#soilfertilityandrecommendations
 get '/specialprojects' => 'pages#specialprojects'
 get '/star' => 'pages#star'
 get '/steven' => 'pages#steven'
+get '/colten' => 'pages#colten'
 get '/storageevaluationandmonitoring' => 'pages#storageevaluationandmonitoring'
 get '/tess' => 'pages#tess'
 get '/training' => 'pages#training'
