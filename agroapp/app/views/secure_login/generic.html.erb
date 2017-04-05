@@ -94,7 +94,7 @@
 	<ul>
 	<% Dir.glob("app/public/#{@farm_id}/CHI*").sort.each do |f| %>
 	<li><%=image_tag("#{f}", size: "240")%></li>
-	<li><%=image_tag("/app/public/#{@farm_id}/#{f}", size: "240")%></li>
+	<li><%=image_tag("/#{f}", size: "240")%></li>
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
