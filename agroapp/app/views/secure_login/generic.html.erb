@@ -93,7 +93,7 @@
 	<h3 id = "informationsubheader">Crop Health</h3>
 	<ul>
 	<% Dir.glob("app/public/#{@farm_id}/CHI*").sort.each do |f| %>
-	<li><%="#{f}"%></li>
+	<li><%=image_tag("#{f}", size: "16")%></li>
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
