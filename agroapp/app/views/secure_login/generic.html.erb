@@ -94,13 +94,13 @@
 	<ul>
 	<% Dir.glob("app/public/#{@farm_id}/CHI*").sort.each do |f| %>
 	<li><%=image_tag("#{f}", size: "240")%></li>
-	<li><%=<img src="#{f}"/> %></li>
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
 	<h3 id = "informationsubheader">Infrareds</h3>
 	<ul>
 	<% Dir.glob("app/public/#{@farm_id}/FCIR*").sort.each do |f| %>
+	<li><%=image_tag("#{f}", size: "240")%></li>
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
