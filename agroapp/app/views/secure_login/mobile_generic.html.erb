@@ -75,12 +75,14 @@
 	<h4>Crop Health</h4>
 	<ul>
 	<% Dir.glob("app/public/#{@farm_id}/CHI*").each do |f| %>
+	<li><%=image_tag("#{f}", size: "240")%></li>
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
 	<h4>Infrareds</h4>
 	<ul>
 	<% Dir.glob("app/public/#{@farm_id}/FCIR*").each do |f| %>
+	<li><%=image_tag("#{f}", size: "240")%></li>
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
