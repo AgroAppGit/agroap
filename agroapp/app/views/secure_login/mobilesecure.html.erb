@@ -68,12 +68,14 @@
 	<h3 id = "informationsubheader">Crop Health</h3>
 	<ul>
 	<% Dir.glob("app/public/#{@farm_login}/CHI*").sort.each do |f| %>
+	<li><%=image_tag("#{f}", size: "240")%></li>
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
 	<h3 id = "informationsubheader">Infrareds</h3>
 	<ul>
 	<% Dir.glob("app/public/#{@farm_login}/FCIR*").sort.each do |f| %>
+	<li><%=image_tag("#{f}", size: "240")%></li>
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
