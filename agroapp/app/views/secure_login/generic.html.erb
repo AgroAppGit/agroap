@@ -89,6 +89,16 @@
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
+	<h2 id = "informationheader">Nematode and Soil Disease Results</h2>
+	<h3 id = "informationsubheader">Nematodes</h3>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_id}/Nema*").sort.each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	<% Dir.glob("app/public/#{@farm_id}/nema*").sort.each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
 	<h2 id = "informationheader">Aerials</h2>
 	<h3 id = "informationsubheader">Crop Health</h3>
 	<ul>
