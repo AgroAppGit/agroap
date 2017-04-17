@@ -117,10 +117,7 @@
 	<h2 id = "informationheader">Irrigation System Design</h2>
 	<h3 id = "informationsubheader">Percent Charts</h3>
 	<ul>
-	<% Dir.glob("app/public/#{@farm_id}/Pchart*").sort.each do |f| %>
-	<li><%= link_to "#{f}", f[/\/.*/] %></li>
-	<% end %>
-	<% Dir.glob("app/public/#{@farm_id}/pchart*").sort.each do |f| %>
+	<% Dir.glob("app/public/#{@farm_id}/PChart*").sort.each do |f| %>
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
