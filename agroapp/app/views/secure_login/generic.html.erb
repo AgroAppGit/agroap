@@ -158,7 +158,11 @@
 	<% end %>
 	</ul>
 	</div>
-	<iframe src="https://calendar.google.com/calendar/embed?src=8vfg9k1q9vgkpmth8r18sojpg0%40group.calendar.google.com&ctz=America/Denver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	<% if ("#{@farm_id}" == "mmitchell") %>
+		<iframe src="https://calendar.google.com/calendar/embed?src=77ton0onhf8tm6hcn5egi2c588%40group.calendar.google.com&ctz=America/Denver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	<% else%>
+		<%= "<iframe src="https://calendar.google.com/calendar/embed?src=8vfg9k1q9vgkpmth8r18sojpg0%40group.calendar.google.com&ctz=America/Denver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>" %>
+	<% end %>
 
 	<div class= "messagearea">
  	<p class= "newnotelink"><%= link_to "Write a note", '/messages/new' %></p>
