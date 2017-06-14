@@ -100,16 +100,30 @@
 	<% end %>
 	</ul>
 	<h2 id = "informationheader">Aerials</h2>
-	<h3 id = "informationsubheader">Crop Health</h3>
+	<h3 id = "informationsubheader">Crop Health Index</h3>
 	<ul>
 	<% Dir.glob("app/public/#{@farm_id}/CHI*").sort.each do |f| %>
 	<li><%=image_tag("#{f}", size: "240")%></li>
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
-	<h3 id = "informationsubheader">Infrareds</h3>
+	<h3 id = "informationsubheader">Infrared Photos</h3>
 	<ul>
 	<% Dir.glob("app/public/#{@farm_id}/FCIR*").sort.each do |f| %>
+	<li><%=image_tag("#{f}", size: "240")%></li>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
+	<h3 id = "informationsubheader">Thermal Photos</h3>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_id}/IR*").sort.each do |f| %>
+	<li><%=image_tag("#{f}", size: "240")%></li>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
+	<h3 id = "informationsubheader">Full Color Photos</h3>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_id}/VIS*").sort.each do |f| %>
 	<li><%=image_tag("#{f}", size: "240")%></li>
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	<% end %>
