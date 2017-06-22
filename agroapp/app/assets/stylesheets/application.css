@@ -229,7 +229,7 @@ a{
 	margin:0 auto;
 }
 .photo1 {
-	max-width: 450px;
+	max-width: 400px;
 	font-size:.9em;
 	float:left;
 }
@@ -248,7 +248,7 @@ a{
 	padding: 0px 0px 0px 0px;
 }
 .photo2 {
-	max-width: 450px;
+	max-width: 400px;
 	font-size:.9em;
 	float:right;
 }
