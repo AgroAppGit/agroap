@@ -108,7 +108,7 @@
 			<li><%=image_tag("#{f}", size: "240")%></li>
 			<li><%= link_to "#{f}", f[/\/.*/] %></li>
 			<% end %>
-			<% Dir.glob("app/public/#{@farm_id}/*IR2.JPG").sort.each do |f| %>
+			<% Dir.glob("app/public/#{@farm_id}/*170605_ENDVI_IR2.JPG") && Dir.glob("app/public/#{@farm_id}/*170606_ENDVI_IR2.JPG").sort.each do |f| %>
 			<li><%=image_tag("#{f}", size: "240")%></li>
 			<li><%= link_to "#{f}", f[/\/.*/] %></li>
 			<% end %>
