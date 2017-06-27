@@ -100,22 +100,17 @@
 	<% end %>
 	</ul>
 	<h2 id = "informationheader">Aerials</h2>
-	<h2 id = "informationheader">June 19th and 20th Flight</h2>
 	<div class= "twopersoncontainer">
 		<div class= "photo1">
 			<h3 id = "informationsubheader">Crop Health Index</h3>
 			<ul>
-			<% Dir.glob("app/public/#{@farm_id}/CHI*").sort.each do |f| %>
-				<% if (f == "*170619" || f == "*170620*") %>
-				<li><%=image_tag("#{f}", size: "240")%></li>
-				<li><%= link_to "#{f}", f[/\/.*/] %></li>
-				<% end %>
+			<% Dir.glob("app/public/#{@farm_id}/CHI*" && ("app/public/#{@farm_id}/*170605*") || ("app/public/#{@farm_id}/*170606*").sort.each do |f| %>
+			<li><%=image_tag("#{f}", size: "240")%></li>
+			<li><%= link_to "#{f}", f[/\/.*/] %></li>
 			<% end %>
 			<% Dir.glob("app/public/#{@farm_id}/*IR2.JPG").sort.each do |f| %>
-				<% if (f == "*170619" || f == "*170620*") %>
-				<li><%=image_tag("#{f}", size: "240")%></li>
-				<li><%= link_to "#{f}", f[/\/.*/] %></li>
-				<% end %>
+			<li><%=image_tag("#{f}", size: "240")%></li>
+			<li><%= link_to "#{f}", f[/\/.*/] %></li>
 			<% end %>
 			</ul>
 		</div>
@@ -123,16 +118,12 @@
 			<h3 id = "informationsubheader">False Color Infrared Photos</h3>
 			<ul>
 			<% Dir.glob("app/public/#{@farm_id}/FCIR*").sort.each do |f| %>
-				<% if (f == "*170619" || f == "*170620*") %>
-				<li><%=image_tag("#{f}", size: "240")%></li>
-				<li><%= link_to "#{f}", f[/\/.*/] %></li>
-				<% end %>
+			<li><%=image_tag("#{f}", size: "240")%></li>
+			<li><%= link_to "#{f}", f[/\/.*/] %></li>
 			<% end %>
 			<% Dir.glob("app/public/#{@farm_id}/*CHN.JPG").sort.each do |f| %>
-				<% if (f == "*170619" || f == "*170620*") %>
-				<li><%=image_tag("#{f}", size: "240")%></li>
-				<li><%= link_to "#{f}", f[/\/.*/] %></li>
-				<% end %>
+			<li><%=image_tag("#{f}", size: "240")%></li>
+			<li><%= link_to "#{f}", f[/\/.*/] %></li>
 			<% end %>
 			</ul>
 		</div>
@@ -142,10 +133,8 @@
 			<h3 id = "informationsubheader">Thermal Photos</h3>
 			<ul>
 			<% Dir.glob("app/public/#{@farm_id}/IR*").sort.each do |f| %>
-				<% if (f == "*170619" || f == "*170620*") %>
-				<li><%=image_tag("#{f}", size: "240")%></li>
-				<li><%= link_to "#{f}", f[/\/.*/] %></li>
-				<% end %>
+			<li><%=image_tag("#{f}", size: "240")%></li>
+			<li><%= link_to "#{f}", f[/\/.*/] %></li>
 			<% end %>
 			</ul>
 		</div>
@@ -153,71 +142,8 @@
 			<h3 id = "informationsubheader">Full Color Photos</h3>
 			<ul>
 			<% Dir.glob("app/public/#{@farm_id}/VIS*").sort.each do |f| %>
-				<% if (f == "*170619" || f == "*170620*") %>
-				<li><%=image_tag("#{f}", size: "240")%></li>
-				<li><%= link_to "#{f}", f[/\/.*/] %></li>
-				<% end %>
-			<% end %>
-			</ul>
-		</div>
-	</div>
-	<h2 id = "informationheader">June 5th and 6th Flight</h2>
-	<div class= "twopersoncontainer">
-		<div class= "photo1">
-			<h3 id = "informationsubheader">Crop Health Index</h3>
-			<ul>
-			<% Dir.glob("app/public/#{@farm_id}/CHI*").sort.each do |f| %>
-				<% if (f == "*170605" || f == "*170606*") %>
-				<li><%=image_tag("#{f}", size: "240")%></li>
-				<li><%= link_to "#{f}", f[/\/.*/] %></li>
-				<% end %>
-			<% end %>
-			<% Dir.glob("app/public/#{@farm_id}/*IR2.JPG").sort.each do |f| %>
-				<% if (f == "*170605" || f == "*170606*") %>
-				<li><%=image_tag("#{f}", size: "240")%></li>
-				<li><%= link_to "#{f}", f[/\/.*/] %></li>
-				<% end %>
-			<% end %>
-			</ul>
-		</div>
-		<div class= "photo2">
-			<h3 id = "informationsubheader">False Color Infrared Photos</h3>
-			<ul>
-			<% Dir.glob("app/public/#{@farm_id}/FCIR*").sort.each do |f| %>
-				<% if (f == "*170605" || f == "*170606*") %>
-				<li><%=image_tag("#{f}", size: "240")%></li>
-				<li><%= link_to "#{f}", f[/\/.*/] %></li>
-				<% end %>
-			<% end %>
-			<% Dir.glob("app/public/#{@farm_id}/*CHN.JPG").sort.each do |f| %>
-				<% if (f == "*170605" || f == "*170606*") %>
-				<li><%=image_tag("#{f}", size: "240")%></li>
-				<li><%= link_to "#{f}", f[/\/.*/] %></li>
-				<% end %>
-			<% end %>
-			</ul>
-		</div>
-	</div>
-	<div class= "twopersoncontainer">
-		<div class= "photo1">
-			<h3 id = "informationsubheader">Thermal Photos</h3>
-			<ul>
-			<% Dir.glob("app/public/#{@farm_id}/IR*").sort.each do |f| %>
-				<% if (f == "*170605.jpg" || f == "*170606.jpg") %>
-				<li><%=image_tag("#{f}", size: "240")%></li>
-				<li><%= link_to "#{f}", f[/\/.*/] %></li>
-				<% end %>
-			<% end %>
-			</ul>
-		</div>
-		<div class= "photo2">
-			<h3 id = "informationsubheader">Full Color Photos</h3>
-			<ul>
-			<% Dir.glob("app/public/#{@farm_id}/VIS*").sort.each do |f| %>
-				<% if (f == "*170605.jpg" || f == "*170606.jpg") %>
-				<li><%=image_tag("#{f}", size: "240")%></li>
-				<li><%= link_to "#{f}", f[/\/.*/] %></li>
-				<% end %>
+			<li><%=image_tag("#{f}", size: "240")%></li>
+			<li><%= link_to "#{f}", f[/\/.*/] %></li>
 			<% end %>
 			</ul>
 		</div>
@@ -333,8 +259,6 @@
 	<iframe src="https://calendar.google.com/calendar/embed?src=pcqktap38kc5qo70ajvpkv6dp8%40group.calendar.google.com&src=8vfg9k1q9vgkpmth8r18sojpg0%40group.calendar.google.com&ctz=America/Denver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 	<% elsif "#{@farm_id}" == "slucero" %>
 	<iframe src="https://calendar.google.com/calendar/embed?src=afrb3dphl7acqp73bu4b2kkp68%40group.calendar.google.com&src=8vfg9k1q9vgkpmth8r18sojpg0%40group.calendar.google.com&ctz=America/Denver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-	<% elsif "#{@farm_id}" == "mkester" %>
-	<iframe src="https://calendar.google.com/calendar/embed?src=m8ogfhljo76c7tmtvuheh9nf9g%40group.calendar.google.com&src=8vfg9k1q9vgkpmth8r18sojpg0%40group.calendar.google.com&ctz=America/Denver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 	<% else %>
 	<iframe src="https://calendar.google.com/calendar/embed?src=8vfg9k1q9vgkpmth8r18sojpg0%40group.calendar.google.com&ctz=America/Denver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 	<% end %>
