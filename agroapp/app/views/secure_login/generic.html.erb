@@ -203,7 +203,7 @@
 			<h3 id = "informationsubheader">Thermal Photos</h3>
 			<ul>
 			<% Dir.glob("app/public/#{@farm_id}/IR*").sort.each do |f| %>
-				<% if (f == "*170605" || f == "*170606*") %>
+				<% if (f == "*170605.jpg" || f == "*170606.jpg") %>
 				<li><%=image_tag("#{f}", size: "240")%></li>
 				<li><%= link_to "#{f}", f[/\/.*/] %></li>
 				<% end %>
@@ -214,7 +214,7 @@
 			<h3 id = "informationsubheader">Full Color Photos</h3>
 			<ul>
 			<% Dir.glob("app/public/#{@farm_id}/VIS*").sort.each do |f| %>
-				<% if (f == "*170605" || f == "*170606*") %>
+				<% if (f == "*170605.jpg" || f == "*170606.jpg") %>
 				<li><%=image_tag("#{f}", size: "240")%></li>
 				<li><%= link_to "#{f}", f[/\/.*/] %></li>
 				<% end %>
