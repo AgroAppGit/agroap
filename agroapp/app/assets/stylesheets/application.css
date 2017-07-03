@@ -674,7 +674,7 @@ a{
 	clear: both;
 	position:relative;
 	float:left;
-	height: 160px;
+	height: 220px;
 	width: auto;
 	padding: 0px 5px 10px 0px;
 }
@@ -693,7 +693,7 @@ a{
 .aerialphoto2 img{
 	position:relative;
 	float:right;
-	height: 160px;
+	height: 220px;
 	width: auto;
 	padding: 0px 0px 10px 5px;
 }
