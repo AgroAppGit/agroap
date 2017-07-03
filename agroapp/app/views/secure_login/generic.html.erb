@@ -190,7 +190,7 @@
 	<br>
 	<h2 id = "informationheader">June 5th and 6th Flight</h2>
 	<div class= "twopersoncontainer">
-		<div class= "photo1">
+		<div class= "aerialphoto1">
 			<h3 id = "informationsubheader">Crop Health Index</h3>
 			<ul>
 			<% Dir.glob("app/public/#{@farm_id}/CHI*17060*").sort.each do |f| %>
@@ -210,7 +210,7 @@
 			<% end %>
 			</ul>
 		</div>
-		<div class= "photo2">
+		<div class= "aerialphoto2">
 			<h3 id = "informationsubheader">False Color Infrared Photos</h3>
 			<ul>
 			<% Dir.glob("app/public/#{@farm_id}/FCIR*17060*").sort.each do |f| %>
@@ -232,7 +232,7 @@
 		</div>
 	</div>
 	<div class= "twopersoncontainer">
-		<div class= "photo1">
+		<div class= "aerialphoto1">
 			<h3 id = "informationsubheader">Thermal Photos</h3>
 			<ul>
 			<% Dir.glob("app/public/#{@farm_id}/IR*17060*").sort.each do |f| %>
@@ -242,7 +242,7 @@
 			<% end %>
 			</ul>
 		</div>
-		<div class= "photo2">
+		<div class= "aerialphoto2">
 			<h3 id = "informationsubheader">Full Color Photos</h3>
 			<ul>
 			<% Dir.glob("app/public/#{@farm_id}/VIS*17060*").sort.each do |f| %>
