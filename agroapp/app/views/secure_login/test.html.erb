@@ -1,0 +1,383 @@
+<!doctype html>
+<html>
+<head>
+
+	<title>"#{@farm_login}"</title>
+</head>
+<body>
+	<div class="pagetop">
+		<div class="pagetop_pic">
+			<%= link_to image_tag("http://i.imgur.com/ii4SpRt.jpg"), '/index' %>
+		</div>
+		<% if current_user %>
+		<ul>
+			<li><%= link_to "Log out", logout_path, method: "delete" %></li>
+			<li><%= link_to "My Information", '/secure' %></li>
+			<li><%= link_to "Home", '/index' %></li>
+			<li><%= link_to "Contact Us", '/contactus' %></li>
+			<li><%= link_to "About Us", '/aboutus' %></li>
+			<li><%= link_to "Services", '/services' %></li>
+			<li><%= link_to "Our Staff", '/ourstaff' %></li>
+			<li><%= link_to "Weather", '/weather' %></li>
+			<li><%= link_to "Resources", '/Resources' %></li>
+			<li><%= link_to "IPM Links", '/ipmlinks' %></li>
+		</ul>
+		<% else %>
+		<ul>
+			<li><a href="clientlogin.html">Client Login</a></li>
+			<li><%= link_to "Home", '/index' %></li>
+			<li><%= link_to "Contact Us", '/contactus' %></li>
+			<li><%= link_to "About Us", '/aboutus' %></li>
+			<li><%= link_to "Services", '/services' %></li>
+			<li><%= link_to "Our Staff", '/ourstaff' %></li>
+			<li><%= link_to "Weather", '/weather' %></li>
+			<li><%= link_to "Resources", '/Resources' %></li>
+			<li><%= link_to "IPM Links", '/ipmlinks' %></li>
+		</ul>
+		<% end %>
+	</div>
+	<% @farm_id = request.fullpath %>
+	<% @farm_id[0..11] = '' %>
+	<div id = "farm_header"><%= "#{@farm_id}" %></div>
+	<div class = "linkandmessagearea">
+	<div class= "informationlinkstyle">
+	<h1 id = "informationheader">Information</h1>
+	<h2 id = "informationheader">Irrigation and ET Data</h2>
+	<h3 id = "informationsubheader">Crop Water Use Summary</h3>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_id}/CropWaterUseSummary*").each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
+	<h3 id = "informationsubheader">Weekly Irrigation Schedule</h3>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_id}/sched*").sort.each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
+	<h3 id = "informationsubheader">Irrigation Summary</h3>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_id}/sum*").sort.each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
+	<h2 id = "informationheader">Crop and Soil Fertility</h2>
+	<h3 id = "informationsubheader">Petioles</h3>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_id}/*Anp.pdf").sort.each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_id}/*micro.pdf").sort.each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
+	<h3 id = "informationsubheader">Fertility Recommendation</h3>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_id}/*FertRecommendation.pdf").sort.each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_id}/*FarmSummary.pdf").sort.each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_id}/*FertilizerMaterials*").sort.each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
+	<h2 id = "informationheader">Nematode and Soil Disease Results</h2>
+	<h3 id = "informationsubheader">Nematodes</h3>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_id}/Nema*").sort.each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	<% Dir.glob("app/public/#{@farm_id}/nema*").sort.each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
+	<h2 id = "informationheader">Aerials</h2>
+<h2 id = "informationheader">June 19th and 20th Flight</h2>
+	<div class= "twopersoncontainer">
+		<div class= "aerialphoto1">
+			<h3 id = "informationsubheader">Crop Health Index</h3>
+			<% Dir.glob("app/public/#{@farm_id}/CHI*170619*").sort.each do |f| %>
+			<%=image_tag("#{f}", size: "240")%><br>
+			<p><%= link_to "#{f}", f[/\/.*/] %></p>
+			<br>
+			<% end %>
+			<% Dir.glob("app/public/#{@farm_id}/CHI*170620*").sort.each do |f| %>
+			<%=image_tag("#{f}", size: "240")%><br>
+			<p><%= link_to "#{f}", f[/\/.*/] %></p>
+			<br>
+			<% end %>
+			<% Dir.glob("app/public/#{@farm_id}/*170619_ENDVI_IR2.JPG").sort.each do |f| %>
+			<%=image_tag("#{f}", size: "240")%><br>
+			<p><%= link_to "#{f}", f[/\/.*/] %></p>
+			<br>
+			<% end %>
+			<% Dir.glob("app/public/#{@farm_id}/*170620_ENDVI_IR2.JPG").sort.each do |f| %>
+			<%=image_tag("#{f}", size: "240")%><br>
+			<p><%= link_to "#{f}", f[/\/.*/] %></p>
+			<br>
+			<% end %>
+		</div>
+		<div class= "aerialphoto2">
+			<h3 id = "informationsubheader">False Color Infrared Photos</h3>
+			<% Dir.glob("app/public/#{@farm_id}/FCIR*170619*").sort.each do |f| %>
+			<%=image_tag("#{f}", size: "240")%><br>
+			<p><%= link_to "#{f}", f[/\/.*/] %></p>
+			<br>
+			<% end %>
+			<% Dir.glob("app/public/#{@farm_id}/FCIR*170620*").sort.each do |f| %>
+			<%=image_tag("#{f}", size: "240")%><br>
+			<p><%= link_to "#{f}", f[/\/.*/] %></p>
+			<br>
+			<% end %>
+			<% Dir.glob("app/public/#{@farm_id}/*170619*CHN.JPG").sort.each do |f| %>
+			<%=image_tag("#{f}", size: "240")%><br>
+			<p><%= link_to "#{f}", f[/\/.*/] %></p>
+			<br>
+			<% end %>
+			<% Dir.glob("app/public/#{@farm_id}/*170620*CHN.JPG").sort.each do |f| %>
+			<%=image_tag("#{f}", size: "240")%><br>
+			<p><%= link_to "#{f}", f[/\/.*/] %></p>
+			<br>
+			<% end %>
+		</div>
+	</div>
+	<div class= "twopersoncontainer">
+		<div class= "aerialphoto1">
+			<h3 id = "informationsubheader">Thermal Photos</h3>
+			<% Dir.glob("app/public/#{@farm_id}/IR*170619*").sort.each do |f| %>
+			<%=image_tag("#{f}", size: "240")%><br>
+			<p><%= link_to "#{f}", f[/\/.*/] %></p>
+			<br>
+			<% end %>
+			<% Dir.glob("app/public/#{@farm_id}/IR*170620*").sort.each do |f| %>
+			<%=image_tag("#{f}", size: "240")%><br>
+			<p><%= link_to "#{f}", f[/\/.*/] %></p>
+			<br>
+			<% end %>>
+		</div>
+		<div class= "aerialphoto2">
+			<h3 id = "informationsubheader">Full Color Photos</h3>
+			<% Dir.glob("app/public/#{@farm_id}/VIS*170619*").sort.each do |f| %>
+			<%=image_tag("#{f}", size: "240")%><br>
+			<p><%= link_to "#{f}", f[/\/.*/] %></p>
+			<br>
+			<% end %>
+			<% Dir.glob("app/public/#{@farm_id}/VIS*170620*").sort.each do |f| %>
+			<%=image_tag("#{f}", size: "240")%><br>
+			<p><%= link_to "#{f}", f[/\/.*/] %></p>
+			<br>
+			<% end %>
+		</div>
+	</div>
+	<br>
+	<br>
+	<br>
+	<h2 id = "informationheader">June 5th and 6th Flight</h2>
+	<div class= "twopersoncontainer">
+		<div class= "aerialphoto1">
+			<h3 id = "informationsubheader">Crop Health Index</h3>
+			<% Dir.glob("app/public/#{@farm_id}/CHI*17060*").sort.each do |f| %>
+			<%=image_tag("#{f}", size: "240")%><br>
+			<p class= "aerialphotoinfo1"><%= link_to "#{f}", f[/\/.*/] %></p>
+			<br>
+			<% end %>
+			<% Dir.glob("app/public/#{@farm_id}/*170605_ENDVI_IR2.JPG").sort.each do |f| %>
+			<%=image_tag("#{f}", size: "240")%><br>
+			<p class= "aerialphotoinfo1"><%= link_to "#{f}", f[/\/.*/] %></p>
+			<br>
+			<% end %>
+			<% Dir.glob("app/public/#{@farm_id}/*170606_ENDVI_IR2.JPG").sort.each do |f| %>
+			<%=image_tag("#{f}", size: "240")%><br>
+			<p class= "aerialphotoinfo1"><%= link_to "#{f}", f[/\/.*/] %></p>
+			<br>
+			<% end %>
+		</div>
+		<div class= "aerialphoto2">
+			<h3 id = "informationsubheader">False Color Infrared Photos</h3>
+			<% Dir.glob("app/public/#{@farm_id}/FCIR*17060*").sort.each do |f| %>
+			<%=image_tag("#{f}", size: "240")%><br>
+			<p class= "aerialphotoinfo2"><%= link_to "#{f}", f[/\/.*/] %></p>
+			<br>
+			<% end %>
+			<% Dir.glob("app/public/#{@farm_id}/*170605*CHN.JPG").sort.each do |f| %>
+			<%=image_tag("#{f}", size: "240")%><br>
+			<p class= "aerialphotoinfo2"><%= link_to "#{f}", f[/\/.*/] %></p>
+			<br>
+			<% end %>
+			<% Dir.glob("app/public/#{@farm_id}/*170606*CHN.JPG").sort.each do |f| %>
+			<%=image_tag("#{f}", size: "240")%><br>
+			<p class= "aerialphotoinfo2"><%= link_to "#{f}", f[/\/.*/] %></p>
+			<br>
+			<% end %>
+		</div>
+	</div>
+	<div class= "twopersoncontainer">
+		<div class= "aerialphoto1">
+			<h3 id = "informationsubheader">Thermal Photos</h3>
+			<% Dir.glob("app/public/#{@farm_id}/IR*17060*").sort.each do |f| %>
+			<%=image_tag("#{f}", size: "240")%><br>
+			<p class= "aerialphotoinfo1"><%= link_to "#{f}", f[/\/.*/] %></p>
+			<br>
+			<% end %>
+		</div>
+		<div class= "aerialphoto2">
+			<h3 id = "informationsubheader">Full Color Photos</h3>
+			<% Dir.glob("app/public/#{@farm_id}/VIS*17060*").sort.each do |f| %>
+			<%=link_to image_tag("#{f}", size: "240"), "#{f}" %><br>
+			<% @image_id = request.fullpath %>
+			<p class= "aerialphotoinfo2"><%= "#{@image_id}" %></p>
+			<br>
+			<% end %>
+		</div>
+	</div>
+	<div class= "bottomgeneric">
+	<h2 id = "informationheader">Irrigation System Design</h2>
+	<h3 id = "informationsubheader">Percent Charts</h3>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_id}/PChart*").sort.each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
+	<h3 id = "informationsubheader">Nozzle Charts</h3>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_id}/Nozzle*").sort.each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	<% Dir.glob("app/public/#{@farm_id}/nozzle*").sort.each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
+	<h3 id = "informationsubheader">Engineering</h3>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_id}/Engi*").sort.each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	<% Dir.glob("app/public/#{@farm_id}/engi*").sort.each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
+	<h2 id = "informationheader">Field Notes</h2>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_id}/Note*").sort.each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	<% Dir.glob("app/public/#{@farm_id}/note*").sort.each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
+	<h2 id = "informationheader">Chemical Recommendations</h2>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_id}/Rec*").sort.each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	<% Dir.glob("app/public/#{@farm_id}/rec*").sort.each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
+	</div>
+	<% if "#{@farm_id}" == "mmitchell" %>
+	<iframe src="https://calendar.google.com/calendar/embed?src=77ton0onhf8tm6hcn5egi2c588%40group.calendar.google.com&src=8vfg9k1q9vgkpmth8r18sojpg0%40group.calendar.google.com&ctz=America/Denver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	<% elsif "#{@farm_id}" == "threes" %>
+	<iframe src="https://calendar.google.com/calendar/embed?src=nstudl5b1b712u1ihooqimem74%40group.calendar.google.com&src=8vfg9k1q9vgkpmth8r18sojpg0%40group.calendar.google.com&ctz=America/Denver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	<% elsif "#{@farm_id}" == "bothell" %>
+	<iframe src="https://calendar.google.com/calendar/embed?src=hp3raqt5qlpr6p9f8mcn5fqvr4%40group.calendar.google.com&src=8vfg9k1q9vgkpmth8r18sojpg0%40group.calendar.google.com&ctz=America/Denver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	<% elsif "#{@farm_id}" == "larue" %>
+	<iframe src="https://calendar.google.com/calendar/embed?src=666chdsbhrnt9qvge1m95hl0l8%40group.calendar.google.com&src=8vfg9k1q9vgkpmth8r18sojpg0%40group.calendar.google.com&ctz=America/Denver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	<% elsif "#{@farm_id}" == "bchristensen" %>
+	<iframe src="https://calendar.google.com/calendar/embed?src=mq5u3hvdkod06r2lse6rmbmd24%40group.calendar.google.com&src=8vfg9k1q9vgkpmth8r18sojpg0%40group.calendar.google.com&ctz=America/Denver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	<% elsif "#{@farm_id}" == "dgunnels" %>
+	<iframe src="https://calendar.google.com/calendar/embed?src=4au0l86nkv84shhsfmu6ffne58%40group.calendar.google.com&src=8vfg9k1q9vgkpmth8r18sojpg0%40group.calendar.google.com&ctz=America/Denver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	<% elsif "#{@farm_id}" == "allied" %>
+	<iframe src="https://calendar.google.com/calendar/embed?src=53btqnqold39u2cuccvuo6ro6g%40group.calendar.google.com&src=8vfg9k1q9vgkpmth8r18sojpg0%40group.calendar.google.com&ctz=America/Denver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	<% elsif "#{@farm_id}" == "crowderfarm" %>
+	<iframe src="https://calendar.google.com/calendar/embed?src=6lav76nkh7mkr6am7p4ema35pk%40group.calendar.google.com&src=8vfg9k1q9vgkpmth8r18sojpg0%40group.calendar.google.com&ctz=America/Denver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	<% elsif "#{@farm_id}" == "dheersink" %>
+	<iframe src="https://calendar.google.com/calendar/embed?src=6lsd6bmirmfht2e816u3ba9o4g%40group.calendar.google.com&src=8vfg9k1q9vgkpmth8r18sojpg0%40group.calendar.google.com&ctz=America/Denver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	<% elsif "#{@farm_id}" == "telliot" %>
+	<iframe src="https://calendar.google.com/calendar/embed?src=06dnep9ltsg4k328t8u888i54k%40group.calendar.google.com&src=8vfg9k1q9vgkpmth8r18sojpg0%40group.calendar.google.com&ctz=America/Denver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	<% elsif "#{@farm_id}" == "kdeacon" %>
+	<iframe src="https://calendar.google.com/calendar/embed?src=ukk4b2mp073ru91417ahuku23o%40group.calendar.google.com&src=8vfg9k1q9vgkpmth8r18sojpg0%40group.calendar.google.com&ctz=America/Denver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	<% elsif "#{@farm_id}" == "triplem" %>
+	<iframe src="https://calendar.google.com/calendar/embed?src=n1od4nrsrbjdaue1pde8qa3nfk%40group.calendar.google.com&src=8vfg9k1q9vgkpmth8r18sojpg0%40group.calendar.google.com&ctz=America/Denver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	<% elsif "#{@farm_id}" == "test" %>
+	<iframe src="https://calendar.google.com/calendar/embed?src=searaver1%40gmail.com&ctz=America/Denver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	<% elsif "#{@farm_id}" == "palmgren" %>
+	<iframe src="https://calendar.google.com/calendar/embed?src=2uusef2414mgtjoab6ig9ru4r8%40group.calendar.google.com&src=8vfg9k1q9vgkpmth8r18sojpg0%40group.calendar.google.com&ctz=America/Denver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	<% elsif "#{@farm_id}" == "bmetz" %>
+	<iframe src="https://calendar.google.com/calendar/embed?src=lsuphvdap7kn92kdhatd10g6sk%40group.calendar.google.com&src=8vfg9k1q9vgkpmth8r18sojpg0%40group.calendar.google.com&ctz=America/Denver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	<% elsif "#{@farm_id}" == "gmetz" %>
+	<iframe src="https://calendar.google.com/calendar/embed?src=lsuphvdap7kn92kdhatd10g6sk%40group.calendar.google.com&src=8vfg9k1q9vgkpmth8r18sojpg0%40group.calendar.google.com&ctz=America/Denver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	<% elsif "#{@farm_id}" == "mcnitt" %>
+	<iframe src="https://calendar.google.com/calendar/embed?src=1rpi055kt2inuivdkof3qf3h9s%40group.calendar.google.com&src=8vfg9k1q9vgkpmth8r18sojpg0%40group.calendar.google.com&ctz=America/Denver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	<% elsif "#{@farm_id}" == "hsessums" %>
+	<iframe src="https://calendar.google.com/calendar/embed?src=2g5db36u04uvkt5j1kvq2ql280%40group.calendar.google.com&src=8vfg9k1q9vgkpmth8r18sojpg0%40group.calendar.google.com&ctz=America/Denver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	<% elsif "#{@farm_id}" == "scidmore" %>
+	<iframe src="https://calendar.google.com/calendar/embed?src=poegjre0c1p7hohks562fhj3js%40group.calendar.google.com&src=8vfg9k1q9vgkpmth8r18sojpg0%40group.calendar.google.com&ctz=America/Denver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	<% elsif "#{@farm_id}" == "mdeacon" %>
+	<iframe src="https://calendar.google.com/calendar/embed?src=8qgq92m7clbvingevefmhbtak0%40group.calendar.google.com&src=8vfg9k1q9vgkpmth8r18sojpg0%40group.calendar.google.com&ctz=America/Denver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	<% elsif "#{@farm_id}" == "kasbell" %>
+	<iframe src="https://calendar.google.com/calendar/embed?src=tem9v79lp5ceu7d4bjv5e95u00%40group.calendar.google.com&src=8vfg9k1q9vgkpmth8r18sojpg0%40group.calendar.google.com&ctz=America/Denver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	<% elsif "#{@farm_id}" == "jdsfarms" %>
+	<iframe src="https://calendar.google.com/calendar/embed?src=kq4t8ub7iq1n29fao51p1ojd5k%40group.calendar.google.com&src=8vfg9k1q9vgkpmth8r18sojpg0%40group.calendar.google.com&ctz=America/Denver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	<% elsif "#{@farm_id}" == "jslane" %>
+	<iframe src="https://calendar.google.com/calendar/embed?src=v5lg0al6qe0bpa2m4fq3nn9jqg%40group.calendar.google.com&src=8vfg9k1q9vgkpmth8r18sojpg0%40group.calendar.google.com&ctz=America/Denver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	<% elsif "#{@farm_id}" == "tslane" %>
+	<iframe src="https://calendar.google.com/calendar/embed?src=b1m20cr95h0trceeu3cmd816h0%40group.calendar.google.com&src=8vfg9k1q9vgkpmth8r18sojpg0%40group.calendar.google.com&ctz=America/Denver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	<% elsif "#{@farm_id}" == "martinezfarms" %>
+	<iframe src="https://calendar.google.com/calendar/embed?src=7dkoq2cu10qe95ip9j4pb2n2e8%40group.calendar.google.com&src=8vfg9k1q9vgkpmth8r18sojpg0%40group.calendar.google.com&ctz=America/Denver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	<% elsif "#{@farm_id}" == "bond" %>
+	<iframe src="https://calendar.google.com/calendar/embed?src=tti3j1iuqp7p2p91s2bn26e564%40group.calendar.google.com&src=8vfg9k1q9vgkpmth8r18sojpg0%40group.calendar.google.com&ctz=America/Denver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	<% elsif "#{@farm_id}" == "cversaw" %>
+	<iframe src="https://calendar.google.com/calendar/embed?src=phuthn9n9ki79r63a4gauhhfg0%40group.calendar.google.com&src=8vfg9k1q9vgkpmth8r18sojpg0%40group.calendar.google.com&ctz=America/Denver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	<% elsif "#{@farm_id}" == "ljfarms" %>
+	<iframe src="https://calendar.google.com/calendar/embed?src=j7kmtfl5hnokhs7gc9rn4uu67o%40group.calendar.google.com&src=8vfg9k1q9vgkpmth8r18sojpg0%40group.calendar.google.com&ctz=America/Denver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	<% elsif "#{@farm_id}" == "sasfarms" %>
+	<iframe src="https://calendar.google.com/calendar/embed?src=6264rsb82vvcek117i55mioq7s%40group.calendar.google.com&src=8vfg9k1q9vgkpmth8r18sojpg0%40group.calendar.google.com&ctz=America/Denver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	<% elsif "#{@farm_id}" == "kunugi" %>
+	<iframe src="https://calendar.google.com/calendar/embed?src=ghhahscq9d3fm0m1nogcbcuqf8%40group.calendar.google.com&src=8vfg9k1q9vgkpmth8r18sojpg0%40group.calendar.google.com&ctz=America/Denver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	<% elsif "#{@farm_id}" == "caldonfarms" %>
+	<iframe src="https://calendar.google.com/calendar/embed?src=gq4vhfc0l2du0enrm09pjh7vfk%40group.calendar.google.com&src=8vfg9k1q9vgkpmth8r18sojpg0%40group.calendar.google.com&ctz=America/Denver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	<% elsif "#{@farm_id}" == "candc" %>
+	<iframe src="https://calendar.google.com/calendar/embed?src=pcqktap38kc5qo70ajvpkv6dp8%40group.calendar.google.com&src=8vfg9k1q9vgkpmth8r18sojpg0%40group.calendar.google.com&ctz=America/Denver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	<% elsif "#{@farm_id}" == "slucero" %>
+	<iframe src="https://calendar.google.com/calendar/embed?src=afrb3dphl7acqp73bu4b2kkp68%40group.calendar.google.com&src=8vfg9k1q9vgkpmth8r18sojpg0%40group.calendar.google.com&ctz=America/Denver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	<% else %>
+	<iframe src="https://calendar.google.com/calendar/embed?src=8vfg9k1q9vgkpmth8r18sojpg0%40group.calendar.google.com&ctz=America/Denver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	<% end %>
+	<div class= "messagearea">
+ 	<p class= "newnotelink"><%= link_to "Write a note", '/messages/new' %></p>
+	<h2 id = "informationheader">Notes</h2>
+	<% message_limit = 1 %>
+	<% @messages.each do |f| %> 
+			<% if (f.grower == "#{@farm_id}" || f.grower == "allgrowers") && message_limit <10 %>
+			<div class= "messagearealoop">
+  			<p><%= f.content %><br>
+			<span id = "message_author"><%= "--"+f.author %></span><br>
+			<span id = "message_create_time"><%= f.created_at %></span>
+			</p>
+			</div>
+			<% message_limit += 1 %>
+			<% else%>
+			<%= "" %>
+			<% end %>
+	<% end %>
+	</div>
+	</div
+	<div class="footer">
+		<div class="container_footer">
+			<div>
+				<ul>
+					<p> Copyright Agro Engineering Inc. 2016</p>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
