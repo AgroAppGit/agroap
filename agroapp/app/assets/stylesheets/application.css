@@ -689,6 +689,7 @@ a{
 	max-width: 400px;
 	font-size:.9em;
 	float:right;
+	text-align:right;
 }
 .aerialphoto2 img{
 	position:relative;
@@ -701,7 +702,6 @@ a{
 	line-height: .8;
 	clear:right;
 	float:right;
-	text-align:right;
 	padding: 0px 0px 0px 0px;
 }
 .fakecss {
