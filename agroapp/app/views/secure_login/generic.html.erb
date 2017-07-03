@@ -195,17 +195,17 @@
 			<ul>
 			<% Dir.glob("app/public/#{@farm_id}/CHI*17060*").sort.each do |f| %>
 			<li><%=image_tag("#{f}", size: "240")%></li>
-			<li><%= link_to "#{f}", f[/\/.*/] %></li>
+			<li class= "aerialphotoinfo1"><%= link_to "#{f}", f[/\/.*/] %></li>
 			<br>
 			<% end %>
 			<% Dir.glob("app/public/#{@farm_id}/*170605_ENDVI_IR2.JPG").sort.each do |f| %>
 			<li><%=image_tag("#{f}", size: "240")%></li>
-			<li><%= link_to "#{f}", f[/\/.*/] %></li>
+			<li class= "aerialphotoinfo1"><%= link_to "#{f}", f[/\/.*/] %></li>
 			<br>
 			<% end %>
 			<% Dir.glob("app/public/#{@farm_id}/*170606_ENDVI_IR2.JPG").sort.each do |f| %>
 			<li><%=image_tag("#{f}", size: "240")%></li>
-			<li><%= link_to "#{f}", f[/\/.*/] %></li>
+			<li class= "aerialphotoinfo1"><%= link_to "#{f}", f[/\/.*/] %></li>
 			<br>
 			<% end %>
 			</ul>
@@ -215,17 +215,17 @@
 			<ul>
 			<% Dir.glob("app/public/#{@farm_id}/FCIR*17060*").sort.each do |f| %>
 			<li><%=image_tag("#{f}", size: "240")%></li>
-			<li><%= link_to "#{f}", f[/\/.*/] %></li>
+			<li class= "aerialphotoinfo2"><%= link_to "#{f}", f[/\/.*/] %></li>
 			<br>
 			<% end %>
 			<% Dir.glob("app/public/#{@farm_id}/*170605*CHN.JPG").sort.each do |f| %>
 			<li><%=image_tag("#{f}", size: "240")%></li>
-			<li><%= link_to "#{f}", f[/\/.*/] %></li>
+			<li class= "aerialphotoinfo2"><%= link_to "#{f}", f[/\/.*/] %></li>
 			<br>
 			<% end %>
 			<% Dir.glob("app/public/#{@farm_id}/*170606*CHN.JPG").sort.each do |f| %>
 			<li><%=image_tag("#{f}", size: "240")%></li>
-			<li><%= link_to "#{f}", f[/\/.*/] %></li>
+			<li class= "aerialphotoinfo2"><%= link_to "#{f}", f[/\/.*/] %></li>
 			<br>
 			<% end %>
 			</ul>
@@ -237,7 +237,7 @@
 			<ul>
 			<% Dir.glob("app/public/#{@farm_id}/IR*17060*").sort.each do |f| %>
 			<li><%=image_tag("#{f}", size: "240")%></li>
-			<li><%= link_to "#{f}", f[/\/.*/] %></li>
+			<li class= "aerialphotoinfo1"><%= link_to "#{f}", f[/\/.*/] %></li>
 			<br>
 			<% end %>
 			</ul>
@@ -247,7 +247,7 @@
 			<ul>
 			<% Dir.glob("app/public/#{@farm_id}/VIS*17060*").sort.each do |f| %>
 			<li><%=image_tag("#{f}", size: "240")%></li>
-			<li><%= link_to "#{f}", f[/\/.*/] %></li>
+			<li class= "aerialphotoinfo2"><%= link_to "#{f}", f[/\/.*/] %></li>
 			<br>
 			<% end %>
 			</ul>

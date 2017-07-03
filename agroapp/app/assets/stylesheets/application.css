@@ -678,6 +678,14 @@ a{
 	width: auto;
 	padding: 0px 5px 10px 0px;
 }
+.aerialphotoinfo1 {
+	line-height: .8;
+	clear:left;
+	float:left;
+	position: relative;
+	padding: 0px 0px 0px 0px;
+}
+
 .aerialphoto2 {
 	max-width: 400px;
 	font-size:.9em;
@@ -689,6 +697,13 @@ a{
 	height: 160px;
 	width: auto;
 	padding: 0px 0px 10px 5px;
+}
+.aerialphotoinfo2 {
+	line-height: .8;
+	clear:right;
+	float:right;
+	position: relative;
+	padding: 0px 0px 0px 0px;
 }
 .fakecss {
 	float:right;
