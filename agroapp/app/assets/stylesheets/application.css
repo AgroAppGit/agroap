@@ -701,6 +701,7 @@ a{
 	line-height: .8;
 	clear:right;
 	float:right;
+	text-align:right;
 	padding: 0px 0px 0px 0px;
 }
 .fakecss {
