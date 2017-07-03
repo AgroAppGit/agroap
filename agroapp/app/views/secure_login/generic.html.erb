@@ -231,8 +231,9 @@
 		<div class= "aerialphoto2">
 			<h3 id = "informationsubheader">Full Color Photos</h3>
 			<% Dir.glob("app/public/#{@farm_id}/VIS*17060*").sort.each do |f| %>
-			<%=link_to "#{f}", image_tag("#{f}", size: "240")%><br>
-			<% @image_id = request.fullpath %>
+			<%=link_to image_tag("#{f}", size: "240"), "#{f}"%><br>
+			<% @image_id = "#{f}" %>
+			<% @image_id[0..11] = '' %>
 			<p class= "aerialphotoinfo2"><%= "#{@image_id}" %></p>
 			<br>
 			<% end %>
