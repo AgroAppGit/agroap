@@ -690,3 +690,6 @@ a{
 	width: auto;
 	padding: 0px 0px 10px 5px;
 }
+.fakecss {
+	float:right;
+}
