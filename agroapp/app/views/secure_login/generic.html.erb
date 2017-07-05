@@ -100,8 +100,8 @@
 	<% end %>
 	</ul>
 	<h2 id = "informationheader">Aerials</h2>
-<h2 id = "informationheader">July 3rd and 4th Flight</h2>
 	<div class= "twopersoncontainer">
+	<h2 id = "informationheader">July 3rd and 4th Flight</h2>
 		<div class= "aerialphoto1">
 			<h3 id = "informationsubheader">Crop Health Index</h3>
 			<% Dir.glob("app/public/#{@farm_id}/CHI*170703*").sort.each do |f| %>
@@ -161,7 +161,7 @@
 			<%=image_tag("#{f}", size: "240")%><br>
 			<p><%= link_to "#{f}", f[/\/.*/] %></p>
 			<br>
-			<% end %>>
+			<% end %>
 		</div>
 		<div class= "aerialphoto2">
 			<h3 id = "informationsubheader">Full Color Photos</h3>
@@ -180,8 +180,8 @@
 	<br>
 	<br>
 	<br>
-<h2 id = "informationheader">June 19th and 20th Flight</h2>
 	<div class= "twopersoncontainer">
+	<h2 id = "informationheader">June 19th and 20th Flight</h2>
 		<div class= "aerialphoto1">
 			<h3 id = "informationsubheader">Crop Health Index</h3>
 			<% Dir.glob("app/public/#{@farm_id}/CHI*170619*").sort.each do |f| %>
@@ -241,7 +241,7 @@
 			<%=image_tag("#{f}", size: "240")%><br>
 			<p><%= link_to "#{f}", f[/\/.*/] %></p>
 			<br>
-			<% end %>>
+			<% end %>
 		</div>
 		<div class= "aerialphoto2">
 			<h3 id = "informationsubheader">Full Color Photos</h3>
@@ -260,8 +260,8 @@
 	<br>
 	<br>
 	<br>
-	<h2 id = "informationheader">June 5th and 6th Flight</h2>
 	<div class= "twopersoncontainer">
+	<h2 id = "informationheader">June 5th and 6th Flight</h2>
 		<div class= "aerialphoto1">
 			<h3 id = "informationsubheader">Crop Health Index</h3>
 			<% Dir.glob("app/public/#{@farm_id}/CHI*17060*").sort.each do |f| %>
