@@ -49,6 +49,12 @@
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
+	<h3 id = "informationsubheader">GAP Certification Packet</h3>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_id}/GAP*").each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
 	<h3 id = "informationsubheader">Weekly Irrigation Schedule</h3>
 	<ul>
 	<% Dir.glob("app/public/#{@farm_id}/sched*").sort.each do |f| %>
