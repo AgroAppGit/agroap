@@ -42,16 +42,17 @@
 	<div class = "linkandmessagearea">
 	<div class= "informationlinkstyle">
 	<h1 id = "informationheader">Information</h1>
+	<h2 id = "informationheader">GAP Information</h2>
+	<h3 id = "informationsubheader">GAP Certification Packet</h3>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_id}/GAP*").each do |f| %>
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<% end %>
+	</ul>
 	<h2 id = "informationheader">Irrigation and ET Data</h2>
 	<h3 id = "informationsubheader">Crop Water Use Summary</h3>
 	<ul>
 	<% Dir.glob("app/public/#{@farm_id}/CropWaterUseSummary*").each do |f| %>
-	<li><%= link_to "#{f}", f[/\/.*/] %></li>
-	<% end %>
-	</ul>
-	<h3 id = "informationsubheader">GAP Certification Packet</h3>
-	<ul>
-	<% Dir.glob("app/public/#{@farm_id}/GAP*").each do |f| %>
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	<% end %>
 	</ul>
