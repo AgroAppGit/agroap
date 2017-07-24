@@ -704,6 +704,9 @@ a{
 	float:right;
 	padding: 0px 0px 0px 0px;
 }
+.informationheader {
+	clear: both;
+}
 .fakecss {
 	float:right;
 }

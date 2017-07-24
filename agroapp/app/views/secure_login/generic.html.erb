@@ -111,7 +111,7 @@
 	<h2 id = "informationheader">July 17th and 18th Flight</h2>
 		<div class= "aerialphoto1">
 			<h3 id = "informationsubheader">Crop Health Index</h3>
-			<% Dir.glob("app/public/#{@farm_id}/*170717_NRIchi.jpg").sort.each do |f| %>
+			<% Dir.glob("app/public/#{@farm_id}/*170717_NIRchi.jpg").sort.each do |f| %>
 			<%=image_tag("#{f}", size: "240")%><br>
 			<p><%= link_to "#{f}", f[/\/.*/] %></p>
 			<br>
@@ -119,7 +119,7 @@
 		</div>
 		<div class= "aerialphoto2">
 			<h3 id = "informationsubheader">False Color Infrared Photos</h3>
-			<% Dir.glob("app/public/#{@farm_id}/*170717_NRI.jpg").sort.each do |f| %>
+			<% Dir.glob("app/public/#{@farm_id}/*170717_NIR.jpg").sort.each do |f| %>
 			<%=image_tag("#{f}", size: "240")%><br>
 			<p><%= link_to "#{f}", f[/\/.*/] %></p>
 			<br>
