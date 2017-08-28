@@ -108,6 +108,106 @@
 	</ul>
 	<h2 id = "informationheader">Aerials</h2>
 	<div class= "twopersoncontainer">
+	<h2 id = "informationheader">August 8th Flight</h2>
+		<div class= "aerialphoto1">
+			<h3 id = "informationsubheader">Crop Health Index</h3>
+			<% Dir.glob("app/public/#{@farm_id}/*080817_NIRchi.jpg").sort.each do |f| %>
+			<%=image_tag("#{f}", size: "240")%><br>
+			<p><%= link_to "#{f}", f[/\/.*/] %></p>
+			<br>
+			<% end %>
+		</div>
+		<div class= "aerialphoto2">
+			<h3 id = "informationsubheader">False Color Infrared Photos</h3>
+			<% Dir.glob("app/public/#{@farm_id}/*080817_NIR.jpg").sort.each do |f| %>
+			<%=image_tag("#{f}", size: "240")%><br>
+			<p><%= link_to "#{f}", f[/\/.*/] %></p>
+			<br>
+			<% end %>
+		</div>
+	</div>
+	<div class= "twopersoncontainer">
+		<div class= "aerialphoto1">
+			<h3 id = "informationsubheader">Thermal Photos</h3>
+			<% Dir.glob("app/public/#{@farm_id}/*080817_TIR.jpg").sort.each do |f| %>
+			<%=image_tag("#{f}", size: "240")%><br>
+			<p><%= link_to "#{f}", f[/\/.*/] %></p>
+			<br>
+			<% end %>
+		</div>
+		<div class= "aerialphoto2">
+			<h3 id = "informationsubheader">Thermal Infrared Crop Health Index</h3>
+			<% Dir.glob("app/public/#{@farm_id}/*080817_TIRchi.jpg").sort.each do |f| %>
+			<%=image_tag("#{f}", size: "240")%><br>
+			<p><%= link_to "#{f}", f[/\/.*/] %></p>
+			<br>
+			<% end %>
+		</div>
+	</div>
+	<div class= "twopersoncontainer">
+		<div class= "aerialphoto1">
+			<h3 id = "informationsubheader">Full Color Photos</h3>
+			<% Dir.glob("app/public/#{@farm_id}/*080817_COL.jpg").sort.each do |f| %>
+			<%=image_tag("#{f}", size: "240")%><br>
+			<p><%= link_to "#{f}", f[/\/.*/] %></p>
+			<br>
+			<% end %>
+		</div>
+	</div>
+	<br>
+	<br>
+	<br>
+	<div class= "twopersoncontainer">
+	<h2 id = "informationheader">August 1st Flight</h2>
+		<div class= "aerialphoto1">
+			<h3 id = "informationsubheader">Crop Health Index</h3>
+			<% Dir.glob("app/public/#{@farm_id}/*010817_NIRchi.jpg").sort.each do |f| %>
+			<%=image_tag("#{f}", size: "240")%><br>
+			<p><%= link_to "#{f}", f[/\/.*/] %></p>
+			<br>
+			<% end %>
+		</div>
+		<div class= "aerialphoto2">
+			<h3 id = "informationsubheader">False Color Infrared Photos</h3>
+			<% Dir.glob("app/public/#{@farm_id}/*010817_NIR.jpg").sort.each do |f| %>
+			<%=image_tag("#{f}", size: "240")%><br>
+			<p><%= link_to "#{f}", f[/\/.*/] %></p>
+			<br>
+			<% end %>
+		</div>
+	</div>
+	<div class= "twopersoncontainer">
+		<div class= "aerialphoto1">
+			<h3 id = "informationsubheader">Thermal Photos</h3>
+			<% Dir.glob("app/public/#{@farm_id}/*010817_TIR.jpg").sort.each do |f| %>
+			<%=image_tag("#{f}", size: "240")%><br>
+			<p><%= link_to "#{f}", f[/\/.*/] %></p>
+			<br>
+			<% end %>
+		</div>
+		<div class= "aerialphoto2">
+			<h3 id = "informationsubheader">Thermal Infrared Crop Health Index</h3>
+			<% Dir.glob("app/public/#{@farm_id}/*010817_TIRchi.jpg").sort.each do |f| %>
+			<%=image_tag("#{f}", size: "240")%><br>
+			<p><%= link_to "#{f}", f[/\/.*/] %></p>
+			<br>
+			<% end %>
+		</div>
+	</div>
+	<div class= "twopersoncontainer">
+		<div class= "aerialphoto1">
+			<h3 id = "informationsubheader">Full Color Photos</h3>
+			<% Dir.glob("app/public/#{@farm_id}/*010817_COL.jpg").sort.each do |f| %>
+			<%=image_tag("#{f}", size: "240")%><br>
+			<p><%= link_to "#{f}", f[/\/.*/] %></p>
+			<br>
+			<% end %>
+		</div>
+	</div>
+	<br>
+	<br>
+	<br>
+	<div class= "twopersoncontainer">
 	<h2 id = "informationheader">July 17th and 18th Flight</h2>
 		<div class= "aerialphoto1">
 			<h3 id = "informationsubheader">Crop Health Index</h3>
@@ -146,7 +246,7 @@
 	</div>
 	<div class= "twopersoncontainer">
 		<div class= "aerialphoto1">
-			<h3 id = "informationsubheader">Thermal Photos</h3>
+			<h3 id = "informationsubheader">Full Color Photos</h3>
 			<% Dir.glob("app/public/#{@farm_id}/*170717_COL.jpg").sort.each do |f| %>
 			<%=image_tag("#{f}", size: "240")%><br>
 			<p><%= link_to "#{f}", f[/\/.*/] %></p>
