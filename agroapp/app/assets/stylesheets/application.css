@@ -86,6 +86,7 @@ a{
 	height:38vw;
 	clear:both;
 	width: 900px;
+	margin: 0 auto;
 }
 .picoverlay {
 	color: #333333;
