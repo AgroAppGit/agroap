@@ -340,40 +340,40 @@ a{
   	border:2px solid #ccc;
   	margin:10px;
   }
-  .servicesgrid div a h3{
+  .servicesgrid a div h3{
   	color:#333;
   	text-align:center;
   	vertical-align: middle;
   	background-color: rgba(204, 204, 204, 0.6);
 
   }
-.servicesgrid div a h3:link {
+.servicesgrid a div h3:link {
 	color: #333;
 	text-decoration: none;
 }
-.servicesgrid div a h3:visited {
+.servicesgrid a div h3:visited {
 	color: #333;
 	text-decoration: none;
 }
-.servicesgrid div a h3:hover {
+.servicesgrid a div h3:hover {
 	color: #3E3D3D;
 	background-color:#ccc;
 	text-decoration: none;
 }
-.servicesgrid div a h3:active {
+.servicesgrid a div h3:active {
 	color: #333;
 	text-decoration: none;
 }
-.servicesgrid div a:link {
+.servicesgrid a div:link {
 	text-decoration: none;
 }
-.servicesgrid div a:visited {
+.servicesgrid a div:visited {
 	text-decoration: none;
 }
-.servicesgrid div a:hover {
+.servicesgrid a div:hover {
 	text-decoration: none;
 }
-.servicesgrid div a:active {
+.servicesgrid a div:active {
 	text-decoration: none;
 }
 .iwm{
