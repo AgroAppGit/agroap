@@ -105,6 +105,7 @@ a{
 	text-shadow:0px 2px 11px #ccc;
 	max-width: 900px;
 	text-align: center;
+	margin: 0 auto;
 }
 .subjectbottom a{
 	color: #333333;
