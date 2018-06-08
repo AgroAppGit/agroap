@@ -119,10 +119,10 @@
 	</div>
 	<% end %>
 	</ul>
-	<h4>Near Infrareds</h4>
+	<h4>Near Infrared</h4>
 	<ul>
-	<div class="aerialphoto2">
 	<% Dir.glob("app/public/#{@farm_id}/*180606_NIR.jpg").each do |f| %>
+	<div class="aerialphoto2">
 	<li><%=image_tag("#{f}")%></li>
 	<div class="aerialphotoinfo2">
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
