@@ -113,9 +113,9 @@
 	<% Dir.glob("app/public/#{@farm_id}/*180606_COL.jpg").each do |f| %>
 	<div class="aerialphoto1">
 	<li><%=image_tag("#{f}")%></li>
-	</div>
-	<div class="aerialinfo1">
+	<div class="aerialphotoinfo1">
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	</div>
 	</div>
 	<% end %>
 	</ul>
@@ -125,7 +125,7 @@
 	<div class="aerialphoto2">
 	<li><%=image_tag("#{f}")%></li>
 	</div>
-	<div class="aerialinfo2">
+	<div class="aerialphotoinfo2">
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	</div>
 	<% end %>
