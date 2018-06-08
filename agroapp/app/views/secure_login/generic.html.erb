@@ -116,9 +116,9 @@
 	<div class="aerialphotoinfo1">
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	</div>
-	</div>
 	<% end %>
 	</ul>
+	</div>
 	<h4>Near Infrared</h4>
 	<ul>
 	<% Dir.glob("app/public/#{@farm_id}/*180606_NIR.jpg").each do |f| %>
@@ -127,9 +127,9 @@
 	<div class="aerialphotoinfo2">
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	</div>
-	</div>
 	<% end %>
 	</ul>
+	</div>
 	<div class= "bottomgeneric">
 	<h2 id = "informationheader">Irrigation System Design</h2>
 	<h3 id = "informationsubheader">Percent Charts</h3>
