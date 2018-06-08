@@ -111,7 +111,7 @@
 	<div class="aerialphoto1">
 	<h4>Full Color</h4>
 	<ul>
-	<% Dir.glob("app/public/#{@farm_id}/*180606_COL.jpg").each do |f| %>
+	<% Dir.glob("app/public/#{@farm_id}/*180606_COL.jpg").sort.each do |f| %>
 	<li><%=image_tag("#{f}")%></li>
 	<div class="aerialphotoinfo1">
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
@@ -122,7 +122,7 @@
 	<div class="aerialphoto2">
 	<h4>Near Infrared</h4>
 	<ul>
-	<% Dir.glob("app/public/#{@farm_id}/*180606_NIR.jpg").each do |f| %>
+	<% Dir.glob("app/public/#{@farm_id}/*180606_NIR.jpg").sort.each do |f| %>
 	<li><%=image_tag("#{f}")%></li>
 	<div class="aerialphotoinfo2">
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
@@ -134,7 +134,7 @@
 	<div class="aerialphoto1">
 	<h4>Near Infrared Crop Health Image</h4>
 	<ul>
-	<% Dir.glob("app/public/#{@farm_id}/*180606_NIRchi.jpg").each do |f| %>
+	<% Dir.glob("app/public/#{@farm_id}/*180606_NIRchi.jpg").sort.each do |f| %>
 	<li><%=image_tag("#{f}")%></li>
 	<div class="aerialphotoinfo1">
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
@@ -145,7 +145,7 @@
 	<div class="aerialphoto2">
 	<h4>Thermal</h4>
 	<ul>
-	<% Dir.glob("app/public/#{@farm_id}/*180606_TIR.jpg").each do |f| %>
+	<% Dir.glob("app/public/#{@farm_id}/*180606_TIR.jpg").sort.each do |f| %>
 	<li><%=image_tag("#{f}")%></li>
 	<div class="aerialphotoinfo2">
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
@@ -157,7 +157,7 @@
 	<div class="aerialphoto1">
 	<h4>Thermal Crop Health Image</h4>
 	<ul>
-	<% Dir.glob("app/public/#{@farm_id}/*180606_TIRchi.jpg").each do |f| %>
+	<% Dir.glob("app/public/#{@farm_id}/*180606_TIRchi.jpg").sort.each do |f| %>
 	<li><%=image_tag("#{f}")%></li>
 	<div class="aerialphotoinfo1">
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
