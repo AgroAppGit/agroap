@@ -109,9 +109,9 @@
 	<h2 id = "informationheader">Aerials</h2>
 	<div class="twopersoncontainer">
 	<h4>Full Color</h4>
+	<div class="aerialphoto1">
 	<ul>
 	<% Dir.glob("app/public/#{@farm_id}/*180606_COL.jpg").each do |f| %>
-	<div class="aerialphoto1">
 	<li><%=image_tag("#{f}")%></li>
 	<div class="aerialphotoinfo1">
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
@@ -120,9 +120,9 @@
 	</ul>
 	</div>
 	<h4>Near Infrared</h4>
+	<div class="aerialphoto2">
 	<ul>
 	<% Dir.glob("app/public/#{@farm_id}/*180606_NIR.jpg").each do |f| %>
-	<div class="aerialphoto2">
 	<li><%=image_tag("#{f}")%></li>
 	<div class="aerialphotoinfo2">
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
