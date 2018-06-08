@@ -107,6 +107,43 @@
 	<% end %>
 	</ul>
 	<h2 id = "informationheader">Aerials</h2>
+	<div class="twopersoncontainer">
+			<div class="aerialphoto1">
+			<div class="aerialinfo1">
+			</div>
+			</a>
+			</div>
+			<div class="aerialphoto2"><a href="bill.html">
+				<img src="/agropics/bill.png" />
+				<div class="aerialinfo2">
+					<h2>Bill Crowder</h1>
+					<p>B.S. Soil and Crop Sciences,</p>
+					<p>Certified Crop Advisor</p>
+					<p>Colorado State University</p>
+				</div>
+			</a>
+	<h4>Full Color</h4>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_id}/*180606_COL.jpg").each do |f| %>
+	<div class="aerialphoto1">
+	<li><%=image_tag("#{f}")%></li>
+	</div>
+	<div class="aerialinfo1">
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	</div>
+	<% end %>
+	</ul>
+	<h4>Near Infrareds</h4>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_id}/*180606_NIR.jpg").each do |f| %>
+	<div class="aerialphoto2">
+	<li><%=image_tag("#{f}")%></li>
+	</div>
+	<div class="aerialinfo2">
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	</div>
+	<% end %>
+	</ul>
 	<div class= "bottomgeneric">
 	<h2 id = "informationheader">Irrigation System Design</h2>
 	<h3 id = "informationsubheader">Percent Charts</h3>
