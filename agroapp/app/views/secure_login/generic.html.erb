@@ -130,6 +130,42 @@
 	<% end %>
 	</ul>
 	</div>
+	<div class="twopersoncontainer">
+	<div class="aerialphoto1">
+	<h4>Near Infrared Crop Health Image</h4>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_id}/*180606_NIRchi.jpg").each do |f| %>
+	<li><%=image_tag("#{f}")%></li>
+	<div class="aerialphotoinfo1">
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	</div>
+	<% end %>
+	</ul>
+	</div>
+	<div class="aerialphoto2">
+	<h4>Thermal</h4>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_id}/*180606_TIR.jpg").each do |f| %>
+	<li><%=image_tag("#{f}")%></li>
+	<div class="aerialphotoinfo2">
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	</div>
+	<% end %>
+	</ul>
+	</div>
+	<div class="twopersoncontainer">
+	<div class="aerialphoto1">
+	<h4>Thermal Crop Health Image</h4>
+	<ul>
+	<% Dir.glob("app/public/#{@farm_id}/*180606_TIRchi.jpg").each do |f| %>
+	<li><%=image_tag("#{f}")%></li>
+	<div class="aerialphotoinfo1">
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	</div>
+	<% end %>
+	</ul>
+	</div>
+	</div>
 	<div class= "bottomgeneric">
 	<h2 id = "informationheader">Irrigation System Design</h2>
 	<h3 id = "informationsubheader">Percent Charts</h3>
