@@ -172,7 +172,7 @@
 	<% Dir.glob("app/public/#{@farm_id}/*180606_TIRchi.jpg").sort.each do |f| %>
 	<li><%=image_tag("#{f}")%></li>
 	<div class="aerialphotoinfo1">
-	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	<li><%= link_to "#{f}", File.basename("#{f}", "_180606_TIRchi.jpg") %></li>
 	</div>
 	<div class="aerialphotoinfo1">
 	<li><h3><%= File.basename("#{f}", "_180606_TIRchi.jpg") %></h3></li>
