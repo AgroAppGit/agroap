@@ -700,6 +700,7 @@ a{
 	height: 220px;
 	width: auto;
 	padding: 0px 0px 10px 5px;
+	clear: both;
 }
 .aerialphotoinfo2 {
 	line-height: .8;
