@@ -118,7 +118,7 @@
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	</div>
 	<div class="aerialphotoinfo1">
-	<li><h3><%= File.basename("#{f}", "_COL.jpg") %></h3></li>
+	<li><h3><%= File.basename("#{f}", "180706_COL.jpg") %></h3></li>
 	</div>
 	<% end %>
 	<% Dir.glob("app/public/#{@farm_id}/*180707_COL.jpg").sort.each do |f| %>
@@ -127,7 +127,7 @@
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	</div>
 	<div class="aerialphotoinfo1">
-	<li><h3><%= File.basename("#{f}", "_COL.jpg") %></h3></li>
+	<li><h3><%= File.basename("#{f}", "180707_COL.jpg") %></h3></li>
 	</div>
 	<% end %>
 	</ul>
@@ -141,7 +141,7 @@
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	</div>
 	<div class="aerialphotoinfo2">
-	<li><h3><%= File.basename("#{f}", "_NIR.jpg") %></h3></li>
+	<li><h3><%= File.basename("#{f}", "180706_NIR.jpg") %></h3></li>
 	</div>
 	<% end %>
 	<% Dir.glob("app/public/#{@farm_id}/*180707_NIR.jpg").sort.each do |f| %>
@@ -150,7 +150,7 @@
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	</div>
 	<div class="aerialphotoinfo2">
-	<li><h3><%= File.basename("#{f}", "_NIR.jpg") %></h3></li>
+	<li><h3><%= File.basename("#{f}", "180707_NIR.jpg") %></h3></li>
 	</div>
 	<% end %>
 	</ul>
@@ -165,7 +165,7 @@
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	</div>
 	<div class="aerialphotoinfo1">
-	<li><h3><%= File.basename("#{f}", "_NIRchi.jpg") %></h3></li>
+	<li><h3><%= File.basename("#{f}", "180706_NIRchi.jpg") %></h3></li>
 	</div>
 	<% end %>
 	<% Dir.glob("app/public/#{@farm_id}/*180707_NIRchi.jpg").sort.each do |f| %>
@@ -174,7 +174,7 @@
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	</div>
 	<div class="aerialphotoinfo1">
-	<li><h3><%= File.basename("#{f}", "_NIRchi.jpg") %></h3></li>
+	<li><h3><%= File.basename("#{f}", "180707_NIRchi.jpg") %></h3></li>
 	</div>
 	<% end %>
 	</ul>
@@ -188,7 +188,7 @@
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	</div>
 	<div class="aerialphotoinfo2">
-	<li><h3><%= File.basename("#{f}", "_TIR.jpg") %></h3></li>
+	<li><h3><%= File.basename("#{f}", "180706_TIR.jpg") %></h3></li>
 	</div>
 	<% end %>
 	<% Dir.glob("app/public/#{@farm_id}/*180707_TIR.jpg").sort.each do |f| %>
@@ -197,7 +197,7 @@
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	</div>
 	<div class="aerialphotoinfo2">
-	<li><h3><%= File.basename("#{f}", "_TIR.jpg") %></h3></li>
+	<li><h3><%= File.basename("#{f}", "180707_TIR.jpg") %></h3></li>
 	</div>
 	<% end %>
 	</ul>
@@ -212,7 +212,7 @@
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	</div>
 	<div class="aerialphotoinfo1">
-	<li><h3><%= File.basename("#{f}", "_TIRchi.jpg") %></h3></li>
+	<li><h3><%= File.basename("#{f}", "180706_TIRchi.jpg") %></h3></li>
 	</div>
 	<% end %>
 	<% Dir.glob("app/public/#{@farm_id}/*180707_TIRchi.jpg").sort.each do |f| %>
@@ -221,7 +221,7 @@
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	</div>
 	<div class="aerialphotoinfo1">
-	<li><h3><%= File.basename("#{f}", "_TIRchi.jpg") %></h3></li>
+	<li><h3><%= File.basename("#{f}", "180707_TIRchi.jpg") %></h3></li>
 	</div>
 	<% end %>
 	</ul>
@@ -233,13 +233,22 @@
 	<div class="aerialphoto1">
 	<h4>Full Color</h4>
 	<ul>
-	<% Dir.glob("app/public/#{@farm_id}/*180622_COL.jpg" || "app/public/#{@farm_id}/*180623_COL.jpg").sort.each do |f| %>
+	<% Dir.glob("app/public/#{@farm_id}/*180622_COL.jpg").sort.each do |f| %>
 	<li><%=image_tag("#{f}")%></li>
 	<div class="aerialphotoinfo1">
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	</div>
 	<div class="aerialphotoinfo1">
-	<li><h3><%= File.basename("#{f}", "_COL.jpg") %></h3></li>
+	<li><h3><%= File.basename("#{f}", "180622_COL.jpg") %></h3></li>
+	</div>
+	<% end %>
+	<% Dir.glob("app/public/#{@farm_id}/*180623_COL.jpg").sort.each do |f| %>
+	<li><%=image_tag("#{f}")%></li>
+	<div class="aerialphotoinfo1">
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	</div>
+	<div class="aerialphotoinfo1">
+	<li><h3><%= File.basename("#{f}", "180623_COL.jpg") %></h3></li>
 	</div>
 	<% end %>
 	</ul>
@@ -247,13 +256,22 @@
 	<div class="aerialphoto2">
 	<h4>Near Infrared</h4>
 	<ul>
-	<% Dir.glob("app/public/#{@farm_id}/*180622_NIR.jpg" || "app/public/#{@farm_id}/*180623_NIR.jpg").sort.each do |f| %>
+	<% Dir.glob("app/public/#{@farm_id}/*180622_NIR.jpg").sort.each do |f| %>
 	<li><%=image_tag("#{f}")%></li>
 	<div class="aerialphotoinfo2">
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	</div>
 	<div class="aerialphotoinfo2">
-	<li><h3><%= File.basename("#{f}", "_NIR.jpg") %></h3></li>
+	<li><h3><%= File.basename("#{f}", "180622_NIR.jpg") %></h3></li>
+	</div>
+	<% end %>
+	<% Dir.glob("app/public/#{@farm_id}/*180623_NIR.jpg").sort.each do |f| %>
+	<li><%=image_tag("#{f}")%></li>
+	<div class="aerialphotoinfo2">
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	</div>
+	<div class="aerialphotoinfo2">
+	<li><h3><%= File.basename("#{f}", "180623_NIR.jpg") %></h3></li>
 	</div>
 	<% end %>
 	</ul>
@@ -262,13 +280,22 @@
 	<div class="aerialphoto1">
 	<h4>Near Infrared Crop Health Image</h4>
 	<ul>
-	<% Dir.glob("app/public/#{@farm_id}/*180622_NIRchi.jpg" || "app/public/#{@farm_id}/*180623_NIRchi.jpg").sort.each do |f| %>
+	<% Dir.glob("app/public/#{@farm_id}/*180622_NIRchi.jpg").sort.each do |f| %>
 	<li><%=image_tag("#{f}")%></li>
 	<div class="aerialphotoinfo1">
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	</div>
 	<div class="aerialphotoinfo1">
-	<li><h3><%= File.basename("#{f}", "_NIRchi.jpg") %></h3></li>
+	<li><h3><%= File.basename("#{f}", "180622_NIRchi.jpg") %></h3></li>
+	</div>
+	<% end %>
+	<% Dir.glob("app/public/#{@farm_id}/*180623_NIRchi.jpg").sort.each do |f| %>
+	<li><%=image_tag("#{f}")%></li>
+	<div class="aerialphotoinfo1">
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	</div>
+	<div class="aerialphotoinfo1">
+	<li><h3><%= File.basename("#{f}", "180623_NIRchi.jpg") %></h3></li>
 	</div>
 	<% end %>
 	</ul>
@@ -276,13 +303,22 @@
 	<div class="aerialphoto2">
 	<h4>Thermal</h4>
 	<ul>
-	<% Dir.glob("app/public/#{@farm_id}/*180622_TIR.jpg" || "app/public/#{@farm_id}/*180623_TIR.jpg").sort.each do |f| %>
+	<% Dir.glob("app/public/#{@farm_id}/*180622_TIR.jpg").sort.each do |f| %>
 	<li><%=image_tag("#{f}")%></li>
 	<div class="aerialphotoinfo2">
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	</div>
 	<div class="aerialphotoinfo2">
-	<li><h3><%= File.basename("#{f}", "_TIR.jpg") %></h3></li>
+	<li><h3><%= File.basename("#{f}", "180622_TIR.jpg") %></h3></li>
+	</div>
+	<% end %>
+	<% Dir.glob("app/public/#{@farm_id}/*180623_TIR.jpg").sort.each do |f| %>
+	<li><%=image_tag("#{f}")%></li>
+	<div class="aerialphotoinfo2">
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	</div>
+	<div class="aerialphotoinfo2">
+	<li><h3><%= File.basename("#{f}", "180623_TIR.jpg") %></h3></li>
 	</div>
 	<% end %>
 	</ul>
@@ -291,16 +327,26 @@
 	<div class="aerialphoto1">
 	<h4>Thermal Crop Health Image</h4>
 	<ul>
-	<% Dir.glob("app/public/#{@farm_id}/*180622_TIRchi.jpg" || "app/public/#{@farm_id}/*180623_TIRchi.jpg").sort.each do |f| %>
+	<% Dir.glob("app/public/#{@farm_id}/*180622_TIRchi.jpg").sort.each do |f| %>
 	<li><%=image_tag("#{f}")%></li>
 	<div class="aerialphotoinfo1">
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
 	</div>
 	<div class="aerialphotoinfo1">
-	<li><h3><%= File.basename("#{f}", "_TIRchi.jpg") %></h3></li>
+	<li><h3><%= File.basename("#{f}", "180622_TIRchi.jpg") %></h3></li>
+	</div>
+	<% end %>
+	<% Dir.glob("app/public/#{@farm_id}/*180623_TIRchi.jpg").sort.each do |f| %>
+	<li><%=image_tag("#{f}")%></li>
+	<div class="aerialphotoinfo1">
+	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+	</div>
+	<div class="aerialphotoinfo1">
+	<li><h3><%= File.basename("#{f}", "180623_TIRchi.jpg") %></h3></li>
 	</div>
 	<% end %>
 	</ul>
+	</div>
 	</div>
 	</div>
 	<div class="twopersoncontainer">
