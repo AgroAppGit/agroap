@@ -170,7 +170,7 @@
 	<div class="aerialphoto1">
 	<h4>Thermal Crop Health Image</h4>
 	<ul>
-	<% Dir.glob("app/public/#{@farm_id}/*180706_TIRchi.jpg" || "app/public/#{@farm_id}/*180706_TIRchi.jpg").sort.each do |f| %>
+	<% Dir.glob("app/public/#{@farm_id}/*180707_TIRchi.jpg" || "app/public/#{@farm_id}/*180706_TIRchi.jpg").sort.each do |f| %>
 	<li><%=image_tag("#{f}")%></li>
 	<div class="aerialphotoinfo1">
 	<li><%= link_to "#{f}", f[/\/.*/] %></li>
