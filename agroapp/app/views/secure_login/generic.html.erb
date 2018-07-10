@@ -110,53 +110,53 @@
 	</div>
 	<h2 id = "informationheader">Aerials</h2>
 	<div class="twopersoncontainer">
-		<h3 id = "informationsubheader">July 7th Flight</h>
-			<div class="aerialphoto1">
-			<h4>Full Color</h4>
-			<ul>
-			<% Dir.glob("app/public/#{@farm_id}/*180706_COL.jpg").sort.each do |f| %>
-				<div class="aerialphotoinfo1">
-				<li><%=image_tag("#{f}")%></li>
-			
-				<li><%= link_to "#{f}", f[/\/.*/] %></li>
-				</div>
-				<div class="aerialphotoinfo1">
-				<li><h3><%= File.basename("#{f}"[/(?<=_).*/], "_180706_COL.jpg") %></h3></li>
-				</div>
-			<% end %>
-			<% Dir.glob("app/public/#{@farm_id}/*180707_COL.jpg").sort.each do |f| %>
+	<h3 id = "informationsubheader">July 7th Flight</h>
+		<div class="aerialphoto1">
+		<h4>Full Color</h4>
+		<ul>
+		<% Dir.glob("app/public/#{@farm_id}/*180706_COL.jpg").sort.each do |f| %>
 			<div class="aerialphotoinfo1">
-			<li><%=image_tag("#{f}")%></li>
+				<li><%=image_tag("#{f}")%></li>
 				<li><%= link_to "#{f}", f[/\/.*/] %></li>
 			</div>
 			<div class="aerialphotoinfo1">
-			<li><h3><%= File.basename("#{f}"[/(?<=_).*/], "_180707_COL.jpg") %></h3></li>
+				<li><h3><%= File.basename("#{f}"[/(?<=_).*/], "_180706_COL.jpg") %></h3></li>
+			</div>
+		<% end %>
+		<% Dir.glob("app/public/#{@farm_id}/*180707_COL.jpg").sort.each do |f| %>
+			<div class="aerialphotoinfo1">
+				<li><%=image_tag("#{f}")%></li>
+				<li><%= link_to "#{f}", f[/\/.*/] %></li>
+			</div>
+			<div class="aerialphotoinfo1">
+				<li><h3><%= File.basename("#{f}"[/(?<=_).*/], "_180707_COL.jpg") %></h3></li>
+			</div>
+		<% end %>
+		</ul>
 		</div>
-	<% end %>
-	</ul>
-	</div>
 	<div class="aerialphoto2">
-	<h4>Near Infrared</h4>
-	<ul>
-	<% Dir.glob("app/public/#{@farm_id}/*180706_NIR.jpg").sort.each do |f| %>
-	<li><%=image_tag("#{f}")%></li>
-	<div class="aerialphotoinfo2">
-	<li><%= link_to "#{f}", f[/\/.*/] %></li>
+		<h4>Near Infrared</h4>
+		<ul>
+		<% Dir.glob("app/public/#{@farm_id}/*180706_NIR.jpg").sort.each do |f| %>
+		<li><%=image_tag("#{f}")%></li>
+			<div class="aerialphotoinfo2">
+				<li><%= link_to "#{f}", f[/\/.*/] %></li>
+			</div>
+			<div class="aerialphotoinfo2">
+				<li><h3><%= File.basename("#{f}"[/(?<=_).*/], "_180706_NIR.jpg") %></h3></li>
+			</div>
+		<% end %>
+		<% Dir.glob("app/public/#{@farm_id}/*180707_NIR.jpg").sort.each do |f| %>
+		<li><%=image_tag("#{f}")%></li>
+			<div class="aerialphotoinfo2">
+				<li><%= link_to "#{f}", f[/\/.*/] %></li>
+			</div>
+			<div class="aerialphotoinfo2">
+				<li><h3><%= File.basename("#{f}"[/(?<=_).*/], "_180707_NIR.jpg") %></h3></li>
+			</div>
+		<% end %>
+		</ul>
 	</div>
-	<div class="aerialphotoinfo2">
-	<li><h3><%= File.basename("#{f}"[/(?<=_).*/], "_180706_NIR.jpg") %></h3></li>
-	</div>
-	<% end %>
-	<% Dir.glob("app/public/#{@farm_id}/*180707_NIR.jpg").sort.each do |f| %>
-	<li><%=image_tag("#{f}")%></li>
-	<div class="aerialphotoinfo2">
-	<li><%= link_to "#{f}", f[/\/.*/] %></li>
-	</div>
-	<div class="aerialphotoinfo2">
-	<li><h3><%= File.basename("#{f}"[/(?<=_).*/], "_180707_NIR.jpg") %></h3></li>
-	</div>
-	<% end %>
-	</ul>
 	</div>
 	<div class="twopersoncontainer">
 	<div class="aerialphoto1">
@@ -205,6 +205,7 @@
 	<% end %>
 	</ul>
 	</div>
+	</div>
 	<div class="twopersoncontainer">
 	<div class="aerialphoto1">
 	<h4>Thermal Crop Health Image</h4>
@@ -228,7 +229,6 @@
 	</div>
 	<% end %>
 	</ul>
-	</div>
 	</div>
 	</div>
 	<div class="twopersoncontainer">
@@ -279,6 +279,7 @@
 	<% end %>
 	</ul>
 	</div>
+	</div>
 	<div class="twopersoncontainer">
 	<div class="aerialphoto1">
 	<h4>Near Infrared Crop Health Image</h4>
@@ -326,6 +327,7 @@
 	<% end %>
 	</ul>
 	</div>
+	</div>
 	<div class="twopersoncontainer">
 	<div class="aerialphoto1">
 	<h4>Thermal Crop Health Image</h4>
@@ -349,7 +351,6 @@
 	</div>
 	<% end %>
 	</ul>
-	</div>
 	</div>
 	</div>
 	<div class="twopersoncontainer">
@@ -382,6 +383,7 @@
 	<% end %>
 	</ul>
 	</div>
+	</div>
 	<div class="twopersoncontainer">
 	<div class="aerialphoto1">
 	<h4>Near Infrared Crop Health Image</h4>
@@ -410,6 +412,7 @@
 	</div>
 	<% end %>
 	</ul>
+	</div>
 	</div>
 	<div class="twopersoncontainer">
 	<div class="aerialphoto1">
