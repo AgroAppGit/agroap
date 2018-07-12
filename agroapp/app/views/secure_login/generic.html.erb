@@ -111,20 +111,18 @@
 	<div class="twopersoncontainer">
 		<div class="aerialphoto1">
 		<h4>Full Color</h4>
-		<ul>
 		<% Dir.glob("app/public/#{@farm_id}/*180706_COL.jpg").sort.each do |f| %>
 			<div class="aerialphotoinfo1">
-				<li><h3><%= File.basename("#{f}"[/(?<=_).*/], "_180706_COL.jpg") %></h3></li>
-				<li><%=image_tag("#{f}")%></li>
+				<h3><%= File.basename("#{f}"[/(?<=_).*/], "_180706_COL.jpg") %></h3>
+				<%=image_tag("#{f}")%>
 			</div>
 		<% end %>
 		<% Dir.glob("app/public/#{@farm_id}/*180707_COL.jpg").sort.each do |f| %>
 			<div class="aerialphotoinfo1">
-				<li><h3><%= File.basename("#{f}"[/(?<=_).*/], "_180707_COL.jpg") %></h3></li>
-				<li><%=image_tag("#{f}")%></li>
+				<h3><%= File.basename("#{f}"[/(?<=_).*/], "_180707_COL.jpg") %></h3>
+				<%=image_tag("#{f}")%>
 			</div>
 		<% end %>
-		</ul>
 		</div>
 		<div class="aerialphoto2">
 		<h4>Near Infrared</h4>

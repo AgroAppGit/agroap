@@ -685,7 +685,7 @@ a{
 	line-height: .8;
 	clear:left;
 	float:left;
-	padding: 0px 0px 0px 0px;
+	padding: 2px;
 	border: 2px solid #ccc;
 }
 
@@ -707,7 +707,7 @@ a{
 	line-height: .8;
 	clear:right;
 	float:right;
-	padding: 0px 0px 0px 0px;
+	padding: 2px;
 	border: 2px solid #ccc;
 }
 #informationheader {
