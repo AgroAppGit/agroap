@@ -673,7 +673,7 @@ a{
 	font-size:.9em;
 	float:left;
 }
-.aerialphoto1im {
+.aerialphoto1im img{
 	clear: both;
 	position:relative;
 	float:left;
@@ -695,7 +695,7 @@ a{
 	float:right;
 	text-align:right;
 }
-.aerialphoto2im {
+.aerialphoto2im img{
 	position:relative;
 	float:right;
 	height: 330px;
