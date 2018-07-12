@@ -686,6 +686,7 @@ a{
 	clear:left;
 	float:left;
 	padding: 0px 0px 0px 0px;
+	border: 2px solid #ccc;
 }
 
 .aerialphoto2 {
@@ -707,6 +708,7 @@ a{
 	clear:right;
 	float:right;
 	padding: 0px 0px 0px 0px;
+	border: 2px solid #ccc;
 }
 #informationheader {
 	clear: both;
