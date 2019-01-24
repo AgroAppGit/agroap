@@ -108,8 +108,8 @@
 	</ul>
 	<h2 id = "informationheader">Aerials</h2>
 	<h3 id = "informationheader">August 4th Flight</h>
-	<div class="twopersoncontainer">
 		<% Dir.glob("app/public/#{@farm_id}/*.jpg").sort.each do |f| %>
+	<div class="twopersoncontainer">
 		<div class="aerialphoto1">
 		<h4>Full Color</h4>
 			<div class="aerialphotoinfo1">
@@ -123,9 +123,9 @@
 				<h3><%= File.basename("#{f}"[/(?<=_).*/]) %></h3>
 				<%=image_tag("#{f}")%>
 			</div><br>
-		<% end %>
 		</div>
 	</div>
+		<% end %>
 	<div class="twopersoncontainer">
 		<div class="aerialphoto1">
 		<h4>Near Infrared Crop Health Index</h4>
