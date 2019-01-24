@@ -115,6 +115,7 @@
 			<div class="aerialphotoinfo1">
 				<h3><%= File.basename("#{f}"[/(?<=_).*/]) %></h3>
 				<%=image_tag("#{f}")%>
+				<% f += 1 %>
 			</div><br>
 		</div>
 		<div class="aerialphoto2">
