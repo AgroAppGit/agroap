@@ -28,7 +28,6 @@ a{
 	margin-top:-10px;
 	text-align: center;
 	width: 100%;
-	font-size: 1em;
 	z-index: 1;
 	margin-bottom:5px;
 	padding:10px 0px 0px 0px;
@@ -83,7 +82,7 @@ a{
 .picturetop, .picturebot, .picturemidtop{
   	background-size: 100% ;
   	background-repeat:no-repeat;
-	height:1300px;
+	height:1100px;
 	clear:both;
 }
 .picoverlay {
@@ -95,6 +94,7 @@ a{
 	max-width: 900px;
 	text-align: center;
 	margin: 0 auto;
+	font-size: 4vw;
 }
 .subjects {
 	padding: 20px 0px 0px 0px;
