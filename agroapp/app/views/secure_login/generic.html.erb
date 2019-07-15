@@ -107,6 +107,82 @@
 	<% end %>
 	</ul>
 	<h2 id = "informationheader">Aerials</h2>
+	<h3 id = "informationheader">July 12th and 13th Flights</h>
+	<div class="twopersoncontainer">
+		<div class="aerialphoto1">
+		<h4>Full Color</h4>
+		<% Dir.glob("app/public/#{@farm_id}/*190712_COL.jpg").sort.each do |f| %>
+			<div class="aerialphotoinfo1">
+				<h3><%= File.basename("#{f}"[/(?<=_).*/], "_190712_COL.jpg") %></h3>
+				<%=image_tag("#{f}")%>
+			</div><br>
+		<% end %>
+		<% Dir.glob("app/public/#{@farm_id}/*190713_COL.jpg").sort.each do |f| %>
+			<div class="aerialphotoinfo1">
+				<h3><%= File.basename("#{f}"[/(?<=_).*/], "_190713_COL.jpg") %></h3>
+				<%=image_tag("#{f}")%>
+			</div><br>
+		<% end %>
+		</div>
+		<div class="aerialphoto2">
+		<h4>Near Infrared</h4>
+		<% Dir.glob("app/public/#{@farm_id}/*190712_NIR.jpg").sort.each do |f| %>
+			<div class="aerialphotoinfo2">
+				<h3><%= File.basename("#{f}"[/(?<=_).*/], "_190712_NIR.jpg") %></h3>
+				<%=image_tag("#{f}")%>
+			</div><br>
+		<% end %>
+		<% Dir.glob("app/public/#{@farm_id}/*190713_NIR.jpg").sort.each do |f| %>
+			<div class="aerialphotoinfo2">
+				<h3><%= File.basename("#{f}"[/(?<=_).*/], "_190713_NIR.jpg") %></h3>
+				<%=image_tag("#{f}")%>
+			</div><br>
+		<% end %>
+		</div>
+	</div>
+	<div class="twopersoncontainer">
+		<div class="aerialphoto1">
+		<h4>Near Infrared Crop Health Index</h4>
+		<% Dir.glob("app/public/#{@farm_id}/*190712_NIRchi.jpg").sort.each do |f| %>
+			<div class="aerialphotoinfo1">
+				<h3><%= File.basename("#{f}"[/(?<=_).*/], "_190712_NIRchi.jpg") %></h3>
+				<%=image_tag("#{f}")%>
+			</div><br>
+		<% end %>
+		<% Dir.glob("app/public/#{@farm_id}/*190713_NIRchi.jpg").sort.each do |f| %>
+			<div class="aerialphotoinfo1">
+				<h3><%= File.basename("#{f}"[/(?<=_).*/], "_190713_NIRchi.jpg") %></h3>
+				<%=image_tag("#{f}")%>
+			</div><br>
+		<% end %>
+		</div>
+		<div class="aerialphoto2">
+		<h4>Raw Thermal</h4>
+		<% Dir.glob("app/public/#{@farm_id}/*190712_TIR.jpg").sort.each do |f| %>
+			<div class="aerialphotoinfo2">
+				<h3><%= File.basename("#{f}"[/(?<=_).*/], "_190712_TIR.jpg") %></h3>
+				<%=image_tag("#{f}")%>
+			</div><br>
+		<% end %>
+		<% Dir.glob("app/public/#{@farm_id}/*190713_TIR.jpg").sort.each do |f| %>
+			<div class="aerialphotoinfo2">
+				<h3><%= File.basename("#{f}"[/(?<=_).*/], "_190713_TIR.jpg") %></h3>
+				<%=image_tag("#{f}")%>
+			</div><br>
+		<% end %>
+		</div>
+	</div>
+	<div class="twopersoncontainer">
+		<div class="aerialphoto1">
+		<h4>Thermal Crop Health Index</h4>
+		<% Dir.glob("app/public/#{@farm_id}/*190627_TIRchi.jpg").sort.each do |f| %>
+			<div class="aerialphotoinfo1">
+				<h3><%= File.basename("#{f}"[/(?<=_).*/], "_190627_TIRchi.jpg") %></h3>
+				<%=image_tag("#{f}")%>
+			</div><br>
+		<% end %>
+		</div>
+	</div>
 	<h3 id = "informationheader">June 27th Flight</h>
 	<div class="twopersoncontainer">
 		<div class="aerialphoto1">
