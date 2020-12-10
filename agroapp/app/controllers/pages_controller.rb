@@ -29,7 +29,7 @@ class PagesController < ApplicationController
 	end
 	def jason
 	end
-	def jeannine
+	def keri
 	end
 	def jessica
 	end
