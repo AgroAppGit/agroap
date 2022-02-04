@@ -63,6 +63,7 @@ get '/mobilelogin' => 'sessions#mobilelogin'
 post 'mobilelogin' => 'sessions#createmobilelogin'
 get '/storageconsulting' => 'pages#storageconsulting'
 get '/keri' => 'pages#keri'
+get '/clayton' => 'pages#clayton'
 
 
 
