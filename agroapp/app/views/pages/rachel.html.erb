@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<%= stylesheet_link_tag 'http://www.agro.com/application.css' %>
+	<title>Rachel Porter</title>
+</head>
+<body>
+	<div class="pagetop">
+		<div class="pagetop_pic">
+			<%= link_to image_tag("http://i.imgur.com/ii4SpRt.jpg"), '/index' %>
+		</div>
+		<% if current_user %>
+		<ul>
+			<li><%= link_to "Log out", logout_path, method: "delete" %></li>
+			<li><%= link_to "My Information", '/secure' %></li>
+			<li><%= link_to "Home", '/index' %></li>
+			<li><%= link_to "Contact Us", '/contactus' %></li>
+			<li><%= link_to "About Us", '/aboutus' %></li>
+			<li><%= link_to "Services", '/services' %></li>
+			<li><%= link_to "Our Staff", '/ourstaff' %></li>
+			<li><%= link_to "Weather", '/weather' %></li>
+			<li><%= link_to "Resources", '/Resources' %></li>
+			<li><%= link_to "IPM Links", '/ipmlinks' %></li>
+		</ul>
+		<% else %>
+		<ul>
+			<li><a href="clientlogin.html">Client Login</a></li>
+			<li><%= link_to "Home", '/index' %></li>
+			<li><%= link_to "Contact Us", '/contactus' %></li>
+			<li><%= link_to "About Us", '/aboutus' %></li>
+			<li><%= link_to "Services", '/services' %></li>
+			<li><%= link_to "Our Staff", '/ourstaff' %></li>
+			<li><%= link_to "Weather", '/weather' %></li>
+			<li><%= link_to "Resources", '/Resources' %></li>
+			<li><%= link_to "IPM Links", '/ipmlinks' %></li>
+		</ul>
+		<% end %>
+	</div>
+	<div class="shortbio">
+		<img src="/agropics/rachel.png" />
+		<div class="shortbiostuff">
+		<h1>Rachel Porter</h1>
+		<p>Rachel was born and raised in Baton Rouge, Louisiana.  She received her bachelor's degree at Lousiana State University with a concentration in crop sciences.  During her time at LSU, she networked with farmers throughout Louisiana, collecting data and understanding each scenario better to recommend applications to farmers.</p>
+		<p>In her free time she enjoys painting, hiking, bicycling, cooking, gardening, and listening to music.</p>
+		<a href="ourstaff.html">Back to our staff</a>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="container_footer">
+			<div>
+				<ul>
+					<p> Copyright Agro Engineering Inc. 2016</p>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
